@@ -1,7 +1,7 @@
 ;(function($, window, document, undefined) {
 
 	$.ajax({
-		url: 'https://of900lijd5.execute-api.us-east-1.amazonaws.com/v1/front-end/grid-people',
+		url: 'https://restcountries.eu/rest/v2/',
 		method: 'GET'
 	}).then(function(data) {
 		console.log(data);
