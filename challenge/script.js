@@ -1,7 +1,7 @@
 var $template =  '<div v-if="countrie.length > 0">' +
 					'<ul v-for="item in countrie">' +
-	                    '<li> {{ item.name }} </li>' +
-	                    
+	                    '<li> <h2>{{ item.name }}</h2> </li>' +
+	                    '<li> <img v-bind:src=\'item.flag\' /> </li>' +
 	                '</ul>' +
                 '</div>';
 
