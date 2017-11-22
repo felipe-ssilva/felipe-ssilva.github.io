@@ -1,10 +1,12 @@
-var $product =  '<div class="product" v-for="item in countrie">' +
-                    '<h3> {{ item.name }} </h3>' +
+var $template =  '<div v-if="countrie.length > 0">' +
+					'<div v-for="item in countrie">' +
+	                    '<h3> {{ item.name }} </h3>' +
+	                '</div>' +
                 '</div>';
 
-// registro
+// Registro
 Vue.component('countrie', {
-    template: $product,
+    template: $template,
     data: function () {
         return {
             countrie: []
@@ -21,27 +23,16 @@ Vue.component('countrie', {
                 dataType: 'json'
             }).done(function (response) {
                 console.log(response);
-                _this.makeCountrie(response);
+                _this.fullCountrie(response);
             });
         },
-        makeCountrie(data){
+        fullCountrie(data){
             this.countrie = data;
         }
     }
 });
 
-// cria a instância raiz
+// Cria a instância raiz
 new Vue({
     el: '._countrie'
 });
-
-/*;(function($, window, document, undefined) {
-
-	$.ajax({
-		url: 'https://restcountries.eu/rest/v2/',
-		method: 'GET'
-	}).then(function(data) {
-		console.log(data);
-	});
-
-})(jQuery, window, document);*/
