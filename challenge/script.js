@@ -1,7 +1,8 @@
 var $template =  '<div v-if="countrie.length > 0">' +
-					'<div v-for="item in countrie">' +
-	                    '<h3> {{ item.name }} </h3>' +
-	                '</div>' +
+					'<ul v-for="item in countrie">' +
+	                    '<li> {{ item.name }} </li>' +
+	                    
+	                '</ul>' +
                 '</div>';
 
 // Registro
