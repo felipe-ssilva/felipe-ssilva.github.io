@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>api</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+	;(function($, window, document, undefined) {
+
+		$.ajax({
+			url: 'https://of900lijd5.execute-api.us-east-1.amazonaws.com/v1/front-end/grid-people',
+			method: 'GET'
+		}).then(function(data) {
+			console.log(data);
+		});
+
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>
