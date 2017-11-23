@@ -29,7 +29,20 @@
 
 	</body>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<<script src="../assets/js/app.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="../assets/js/app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyD56s55kRIfgHuN8ONgvnJyWlTNd7cRjiQ",
+	    authDomain: "blog-a6802.firebaseapp.com",
+	    databaseURL: "https://blog-a6802.firebaseio.com",
+	    projectId: "blog-a6802",
+	    storageBucket: "blog-a6802.appspot.com",
+	    messagingSenderId: "214436775037"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	
 </html>
