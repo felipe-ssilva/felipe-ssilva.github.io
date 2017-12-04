@@ -319,6 +319,7 @@ Copyright (c) 2012 Dan Eden
     border-left: 1px solid #95a4a9;
 }
 ._content h2 {
+    color: #95a4a9;
     font-size: 25px;
     font-weight: 900;
 }
