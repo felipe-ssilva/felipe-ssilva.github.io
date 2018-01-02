@@ -1550,6 +1550,7 @@ header .logo a {
 	font-size: 1.5rem;
 	line-height: 1;
 }
+.about-content .info-list li span a { text-decoration: none; color: #888888; }
 .about-content .skill-bars {
 	margin-top: 6rem;
 }
