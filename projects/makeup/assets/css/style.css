@@ -1,0 +1,2122 @@
+/*----------------------------------------*\ VARIABLES
+\*----------------------------------------*/
+/* FONTS 
+@font-face { font-family: 'Quicksand'; src: url("../fonts/quicksand_book-webfont.eot"); src: url("../fonts/quicksand_book-webfont.woff") format("woff"), url("../fonts/quicksand_book-webfont.ttf") format("truetype"), url("../fonts/quicksand_book-webfont.svg#quicksandbook") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Quicksand'; src: url("../fonts/QuicksandBold-Regular.eot"); src: url("../fonts/QuicksandBold-Regular.woff") format("woff"), url("../fonts/QuicksandBold-Regular.ttf") format("truetype"), url("../fonts/QuicksandBold-Regular.svg#quicksandbook") format("svg"); font-weight: bold; font-style: normal; }
+
+@font-face { font-family: 'Raleway-Bold'; src: url("../fonts/Raleway/Raleway-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Raleway-ExtraBold'; src: url("../fonts/Raleway/Raleway-ExtraBold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Raleway-Heavy'; src: url("../fonts/Raleway/Raleway-Heavy.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Raleway-Light'; src: url("../fonts/Raleway/Raleway-Light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Raleway-Medium'; src: url("../fonts/Raleway/Raleway-Medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Raleway-Regular'; src: url("../fonts/Raleway/Raleway-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Raleway-SemiBold'; src: url("../fonts/Raleway/Raleway-SemiBold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Raleway-Thin'; src: url("../fonts/Raleway/Raleway-Thin.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "Austin-Italic"; src: url("../fonts/austin/Austin-Italic.eot"); src: url("../fonts/austin/Austin-Italic.eot#iefix") format("embedded-opentype"), url("../fonts/austin/Austin-Italic.svg#Austin-Italic") format("svg"), url("../fonts/austin/Austin-Italic.ttf") format("truetype"), url("../fonts/austin/Austin-Italic.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "AustinText-SemiboldItalic"; src: url("../fonts/austin/AustinText-SemiboldItalic.eot"); src: url("../fonts/austin/AustinText-SemiboldItalic.eot#iefix") format("embedded-opentype"), url("../fonts/austin/AustinText-SemiboldItalic.svg#AustinText-SemiboldItalic") format("svg"), url("../fonts/austin/AustinText-SemiboldItalic.ttf") format("truetype"), url("../fonts/austin/AustinText-SemiboldItalic.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "Austin-Semibold"; src: url("../fonts/austin/Austin-Semibold.eot"); src: url("../fonts/austin/Austin-Semibold.eot#iefix") format("embedded-opentype"), url("../fonts/austin/Austin-Semibold.svg#Austin-Semibold") format("svg"), url("../fonts/austin/Austin-Semibold.ttf") format("truetype"), url("../fonts/austin/Austin-Semibold.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "Austin-Light"; src: url("../fonts/austin/Austin-Light.eot"); src: url("../fonts/austin/Austin-Light.eot#iefix") format("embedded-opentype"), url("../fonts/austin/Austin-Light.svg#Austin-Light") format("svg"), url("../fonts/austin/Austin-Light.ttf") format("truetype"), url("../fonts/austin/Austin-Light.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "Austin-Medium"; src: url("../fonts/austin/Austin-Medium.eot"); src: url("../fonts/austin/Austin-Medium.eot#iefix") format("embedded-opentype"), url("../fonts/austin/Austin-Medium.svg#Austin-Medium") format("svg"), url("../fonts/austin/Austin-Medium.ttf") format("truetype"), url("../fonts/austin/Austin-Medium.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "Austin-Bold"; src: url("../fonts/austin/Austin-Bold.eot"); src: url("../fonts/austin/Austin-Bold.eot#iefix") format("embedded-opentype"), url("../fonts/austin/Austin-Bold.svg#Austin-Bold") format("svg"), url("../fonts/austin/Austin-Bold.ttf") format("truetype"), url("../fonts/austin/Austin-Bold.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "Austin-BoldItalic"; src: url("../fonts/austin/Austin-BoldItalic.eot"); src: url("../fonts/austin/Austin-BoldItalic.eot#iefix") format("embedded-opentype"), url("../fonts/austin/Austin-BoldItalic.svg#Austin-BoldItalic") format("svg"), url("../fonts/austin/Austin-BoldItalic.ttf") format("truetype"), url("../fonts/austin/Austin-BoldItalic.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "Austin-Roman"; src: url("../fonts/austin/Austin-Roman.eot"); src: url("../fonts/austin/Austin-Roman.eot#iefix") format("embedded-opentype"), url("../fonts/austin/Austin-Roman.svg#Austin-Roman") format("svg"), url("../fonts/austin/Austin-Roman.ttf") format("truetype"), url("../fonts/austin/Austin-Roman.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "GothamHTF-Bold"; src: url("../fonts/gotham/GothamHTF-Bold.eot"); src: url("../fonts/gotham/GothamHTF-Bold.eot#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamHTF-Bold.svg#GothamHTF-Bold") format("svg"), url("../fonts/gotham/GothamHTF-Bold.ttf") format("truetype"), url("../fonts/gotham/GothamHTF-Bold.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "GothamHTF-Book"; src: url("../fonts/gotham/GothamHTF-Book.eot"); src: url("../fonts/gotham/GothamHTF-Book.eot#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamHTF-Book.svg#GothamHTF-Book") format("svg"), url("../fonts/gotham/GothamHTF-Book.ttf") format("truetype"), url("../fonts/gotham/GothamHTF-Book.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "GothamHTF-Black"; src: url("../fonts/gotham/GothamHTF-Black.eot"); src: url("../fonts/gotham/GothamHTF-Black.eot#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamHTF-Black.svg#GothamHTF-Black") format("svg"), url("../fonts/gotham/GothamHTF-Black.ttf") format("truetype"), url("../fonts/gotham/GothamHTF-Black.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "GothamHTF-Medium"; src: url("../fonts/gotham/GothamHTF-Medium.eot"); src: url("../fonts/gotham/GothamHTF-Medium.eot#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamHTF-Medium.svg#GothamHTF-Medium") format("svg"), url("../fonts/gotham/GothamHTF-Medium.ttf") format("truetype"), url("../fonts/gotham/GothamHTF-Medium.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "GothamHTF-BookItalic"; src: url("../fonts/gotham/GothamHTF-BookItalic.eot"); src: url("../fonts/gotham/GothamHTF-BookItalic.eot#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamHTF-BookItalic.svg#GothamHTF-BookItalic") format("svg"), url("../fonts/gotham/GothamHTF-BookItalic.ttf") format("truetype"), url("../fonts/gotham/GothamHTF-BookItalic.woff") format("woff"); font-weight: normal; font-style: normal; }
+*/
+/*----------------------------------------*\ TYPOGRAPHY
+\*----------------------------------------*/
+/* line 5, /vagrant/sass/_typography.scss */
+h1, h2, h3, h5, h6, .h1, .h2, .h3 { text-transform: uppercase; margin: 0; padding: 0; }
+
+/* line 10, /vagrant/sass/_typography.scss */
+h1 { font-size: 19px; color: black; }
+
+/* line 14, /vagrant/sass/_typography.scss */
+h2, .h2 { font-size: 14px; color: black; }
+
+/* line 18, /vagrant/sass/_typography.scss */
+.h4 { font-size: 17px; font-weight: 400; }
+
+/* line 22, /vagrant/sass/_typography.scss */
+h5 { font-size: 12px; color: #ffffff; }
+
+/* line 26, /vagrant/sass/_typography.scss */
+h6 { font-size: 19px; color: black; font-weight: 400; }
+
+/* line 32, /vagrant/sass/_typography.scss */
+strong, b { font-weight: 700; }
+
+/*----------------------------------------*\ BUTTONS
+\*----------------------------------------*/
+/* line 5, /vagrant/sass/_buttons.scss */
+.btn { display: inline-block; padding: 2px; background: url("../images/bg/button-bg.png") top center; background-size: 100% 100%; text-decoration: none; font-size: 12px; font-weight: 700; text-transform: uppercase; border-radius: 4px; border: none; cursor: pointer; }
+/* line 17, /vagrant/sass/_buttons.scss */
+.btn span { display: block; min-height: 36px; padding: 10px 12px 5px; background: #ffffff; font-style: normal; }
+/* line 25, /vagrant/sass/_buttons.scss */
+.btn.stylish { border: 1px solid #909090; border-radius: 5px; box-shadow: 0 2px 5px #888888; padding: 7px 15px; color: #000000; background: url("../images/bg/stylish-button-bg.png"); background-size: 100% 100%; }
+/* line 33, /vagrant/sass/_buttons.scss */
+.btn.stylish:active { box-shadow: inset 0 0 6px slategray; }
+/* line 39, /vagrant/sass/_buttons.scss */
+.btn.on span { background: #000000; color: #ffffff; }
+
+/* line 1, /vagrant/sass/_preloader.scss */
+#circularG { position: relative; width: 83px; height: 83px; margin: auto; }
+
+/* line 8, /vagrant/sass/_preloader.scss */
+.circularG { position: absolute; background-color: #fff; width: 3px; height: 3px; border-radius: 50%; animation-name: bounce_circularG; -webkit-animation-name: bounce_circularG; animation-duration: 1.68s; -webkit-animation-duration: 1.68s; animation-iteration-count: infinite; -webkit-animation-iteration-count: infinite; animation-direction: normal; -webkit-animation-direction: normal; }
+
+/* line 24, /vagrant/sass/_preloader.scss */
+#circularG_1 { left: 0px; top: 48px; animation-delay: 0; -webkit-animation-delay: 0; }
+
+/* line 30, /vagrant/sass/_preloader.scss */
+#circularG_2 { left: -1px; top: 29px; animation-delay: 0.12s; -webkit-animation-delay: 0.12s; }
+
+/* line 36, /vagrant/sass/_preloader.scss */
+#circularG_3 { top: 12px; left: 7px; animation-delay: 0.24s; -webkit-animation-delay: 0.24s; }
+
+/* line 42, /vagrant/sass/_preloader.scss */
+#circularG_4 { right: 55px; top: 1px; animation-delay: 0.36s; -webkit-animation-delay: 0.36s; }
+
+/* line 48, /vagrant/sass/_preloader.scss */
+#circularG_5 { right: 38px; top: -3px; animation-delay: 0.48s; -webkit-animation-delay: 0.48s; }
+
+/* line 54, /vagrant/sass/_preloader.scss */
+#circularG_6 { right: 21px; top: 0px; animation-delay: .6s; -webkit-animation-delay: .6s; }
+
+/* line 60, /vagrant/sass/_preloader.scss */
+#circularG_7 { right: 5px; top: 11px; animation-delay: .72s; -webkit-animation-delay: .72s; }
+
+/* line 66, /vagrant/sass/_preloader.scss */
+#circularG_8 { right: -3px; top: 28px; animation-delay: .84s; -webkit-animation-delay: .84s; }
+
+/* line 72, /vagrant/sass/_preloader.scss */
+#circularG_9 { right: -2px; top: 44px; animation-delay: .96s; -webkit-animation-delay: .96s; }
+
+/* line 78, /vagrant/sass/_preloader.scss */
+#circularG_10 { right: 4px; bottom: 15px; animation-delay: 1.08s; -webkit-animation-delay: 1.08s; }
+
+/* line 84, /vagrant/sass/_preloader.scss */
+#circularG_11 { right: 18px; bottom: 3px; animation-delay: 1.2s; -webkit-animation-delay: 1.2s; }
+
+/* line 90, /vagrant/sass/_preloader.scss */
+#circularG_12 { right: 34px; bottom: -2px; animation-delay: 1.32s; -webkit-animation-delay: 1.32s; }
+
+/* line 96, /vagrant/sass/_preloader.scss */
+#circularG_13 { left: 23px; bottom: 1px; animation-delay: 1.44s; -webkit-animation-delay: 1.44s; }
+
+/* line 102, /vagrant/sass/_preloader.scss */
+#circularG_14 { left: 9px; bottom: 12px; animation-delay: 1.56s; -webkit-animation-delay: 1.56s; }
+
+@-webkit-keyframes bounce_circularG { /* line 109, /vagrant/sass/_preloader.scss */
+  0% { transform: scale(4); -webkit-transform: scale(4); }
+  /* line 114, /vagrant/sass/_preloader.scss */
+  100% { transform: scale(1); -webkit-transform: scale(1); } }
+
+@keyframes bounce_circularG { /* line 120, /vagrant/sass/_preloader.scss */
+  0% { transform: scale(4); -webkit-transform: scale(4); }
+  /* line 125, /vagrant/sass/_preloader.scss */
+  100% { transform: scale(1); -webkit-transform: scale(1); } }
+
+/*----------------------------------------*\ UTILS
+\*----------------------------------------*/
+/* line 4, /vagrant/sass/_general.scss */
+.d-none { display: none !important; }
+
+/* line 7, /vagrant/sass/_general.scss */
+.text-uppercase { text-transform: uppercase; }
+
+/*----------------------------------------*\ BASE
+\*----------------------------------------*/
+/* line 15, /vagrant/sass/_general.scss */
+body { font-family: Arial, sans-serif; font-weight: 400; line-height: 1; font-size: 12px; background: #fff; color: black; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+@media (max-width: 628px) { /* line 15, /vagrant/sass/_general.scss */
+  body { padding-top: 30px; } }
+
+/* line 30, /vagrant/sass/_general.scss */
+.header { max-width: 910px; margin: 0 auto; position: relative; }
+/* line 34, /vagrant/sass/_general.scss */
+.header .main-title { display: none; font-size: 64px; font-family: 'Austin-Light'; text-align: center; color: #000; padding: 30px 0 6px; line-height: 1; }
+@media (max-width: 628px) { /* line 34, /vagrant/sass/_general.scss */
+  .header .main-title { padding: 26px 0 6px; } }
+
+/* line 48, /vagrant/sass/_general.scss */
+main { position: relative; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width: 100%; max-width: 910px; height: 696px; margin: 0 auto; border: 1px solid #7b7b7b; }
+@media (max-width: 628px) { /* line 48, /vagrant/sass/_general.scss */
+  main { padding: 0; max-height: initial; height: 100%; } }
+
+/* line 66, /vagrant/sass/_general.scss */
+.outside-footer { position: absolute; top: 101%; color: #b08c52; left: 10px; font-size: 14px; }
+
+/* line 74, /vagrant/sass/_general.scss */
+.color-studio-screen { position: relative; background: #ffffff; }
+
+/* line 79, /vagrant/sass/_general.scss */
+ul, ol { list-style: none; margin: 0; padding: 0; }
+
+/* line 84, /vagrant/sass/_general.scss */
+a, a:focus { color: black; text-decoration: underline; text-transform: uppercase; }
+
+/* line 91, /vagrant/sass/_general.scss */
+.page { display: none; }
+/* line 93, /vagrant/sass/_general.scss */
+.page.on { display: block; }
+
+/* line 98, /vagrant/sass/_general.scss */
+.view { display: none; }
+/* line 100, /vagrant/sass/_general.scss */
+.view.on { display: block; }
+
+/* line 107, /vagrant/sass/_general.scss */
+.tooltip .tooltip-inner { border: 1px solid #a0773a; border-radius: 14px; background: rgba(0, 0, 18, 0.75); font-family: Quicksand, Arial, sans-serif; }
+
+/* line 116, /vagrant/sass/_general.scss */
+.close-view { position: absolute; top: 0; right: 0; border: none; display: block; width: 35px; height: 25px; cursor: pointer; }
+/* line 125, /vagrant/sass/_general.scss */
+.close-view .close-view-icon { position: absolute; right: 10px; top: 5px; display: block; width: 15px; height: 15px; background: url("assets/images/color-studio-sprite.png") -985px 0; }
+
+/*----------------------------------------*\ Extend/Inheritance
+\*----------------------------------------*/
+/* line 140, /vagrant/sass/_general.scss */
+.gold-frame, #webcam-wrapper, #vme-wrapper { position: absolute; top: 0; left: 6px; width: 421px; height: 482px; overflow: hidden; background: url("assets/images/color-studio-vme-frame.png") 0 -4px no-repeat; }
+
+/* line 152, /vagrant/sass/_general.scss */
+.flash-box, #webcam-wrapper #webcam-container #webcam { width: 355px; height: 100%; background-color: grey; margin: 10px 14px; }
+
+/*----------------------------------------*\ STUDIO-LOGO
+\*----------------------------------------*/
+/* line 163, /vagrant/sass/_general.scss */
+.color-studio-logo { display: none; position: absolute; top: 9px; left: -5px; width: 470px; height: 62px; content: ""; background: url("../images/color-studio-sprite.png"); background-position: -434px 0; }
+/* line 171, /vagrant/sass/_general.scss */
+.alcon-mexico .color-studio-logo { background: url("../images/alcon-mexico/color-studio-sprite.png"); background-position: -434px 0; }
+/* line 175, /vagrant/sass/_general.scss */
+.alcon-russia .color-studio-logo { background: url("../images/color-studio-sprite-ru.png"); }
+/* line 178, /vagrant/sass/_general.scss */
+body.route-competition .color-studio-logo { display: none; }
+
+/*----------------------------------------*\ STATES CHANGE BLOCK AT TOP
+\*----------------------------------------*/
+/* line 187, /vagrant/sass/_general.scss */
+.change-states { margin: 50px; padding: 20px; background: #ffffff; }
+/* line 191, /vagrant/sass/_general.scss */
+.change-states h1 { padding-bottom: 15px; }
+/* line 194, /vagrant/sass/_general.scss */
+.change-states li { padding-bottom: 10px; margin-right: 15px; cursor: pointer; display: inline-block; }
+
+/*----------------------------------------*\ GLOBAL OVERLAYS
+\*----------------------------------------*/
+/* line 209, /vagrant/sass/_general.scss */
+body.loading .global-loader, body.orientation-locked .orientation-msg, body.browser-unsupported .browser-unsupported-msg, body.device-unsupported .device-unsupported-msg { display: block; }
+
+/* line 214, /vagrant/sass/_general.scss */
+.global-overlay { z-index: 999; display: none; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: 0 auto; color: #ffffff; background: rgba(0, 0, 0, 0.72); text-align: center; }
+/* line 226, /vagrant/sass/_general.scss */
+.global-overlay .plate { position: absolute; left: 0; right: 0; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); display: block; }
+/* line 234, /vagrant/sass/_general.scss */
+.global-overlay .plate span { display: inline-block; margin-top: 20px; color: #fff; font-size: 18px; font-family: 'GothamHTF-Book'; text-transform: uppercase; }
+
+/* line 268, /vagrant/sass/_general.scss */
+body:not(.no-hover) .btn:hover span { background: #000000; color: #ffffff; }
+/* line 273, /vagrant/sass/_general.scss */
+body:not(.no-hover) .btn.stylish:hover { box-shadow: inset 0 0 6px lightgray; }
+/* line 278, /vagrant/sass/_general.scss */
+body:not(.no-hover) a:hover { color: #f32837; }
+
+/*----------------------------------------*\ CUSTOM SCROLLBAR
+\*----------------------------------------*/
+/* line 287, /vagrant/sass/_general.scss */
+.slimScrollBar { height: 27px !important; opacity: 1!important; background: url("../images/color-studio-sprite.png") -970px -77px !important; }
+
+/* line 296, /vagrant/sass/_general.scss */
+#face-products-view, #eyes-products-view, #lips-products-view, #hairstyles-products-view { position: absolute; top: 0; left: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 478px; height: 375px; }
+/* line 305, /vagrant/sass/_general.scss */
+#face-products-view .tab-content, #eyes-products-view .tab-content, #lips-products-view .tab-content, #hairstyles-products-view .tab-content { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 40px 0 20px; height: 375px; width: 468px; overflow-y: auto; }
+/* line 313, /vagrant/sass/_general.scss */
+#face-products-view .tab-content .product-lines, #eyes-products-view .tab-content .product-lines, #lips-products-view .tab-content .product-lines, #hairstyles-products-view .tab-content .product-lines { min-height: 120px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-bottom: 0; font-size: 0; }
+/* line 320, /vagrant/sass/_general.scss */
+#face-products-view .tab-content .product-lines li, #eyes-products-view .tab-content .product-lines li, #lips-products-view .tab-content .product-lines li, #hairstyles-products-view .tab-content .product-lines li { position: relative; display: inline-block; width: 50%; height: 125px; margin-top: 0; margin-left: 0; margin-right: -5px; margin-bottom: 0; text-align: center; vertical-align: middle; cursor: pointer; }
+/* line 332, /vagrant/sass/_general.scss */
+#face-products-view .tab-content .product-lines li i, #eyes-products-view .tab-content .product-lines li i, #lips-products-view .tab-content .product-lines li i, #hairstyles-products-view .tab-content .product-lines li i { display: block; margin: auto; width: 89px; height: 85px; }
+/* line 338, /vagrant/sass/_general.scss */
+#face-products-view .tab-content .product-lines li img, #eyes-products-view .tab-content .product-lines li img, #lips-products-view .tab-content .product-lines li img, #hairstyles-products-view .tab-content .product-lines li img { position: relative; top: 10px; width: 70%; height: auto; }
+/* line 344, /vagrant/sass/_general.scss */
+#face-products-view .tab-content .product-lines li span, #eyes-products-view .tab-content .product-lines li span, #lips-products-view .tab-content .product-lines li span, #hairstyles-products-view .tab-content .product-lines li span { display: block; padding: 0 5px; font-size: 11px; text-transform: uppercase; font-weight: 700; }
+/* line 353, /vagrant/sass/_general.scss */
+#face-products-view .tab-content .product-lines li.on img, #eyes-products-view .tab-content .product-lines li.on img, #lips-products-view .tab-content .product-lines li.on img, #hairstyles-products-view .tab-content .product-lines li.on img { top: 0; width: 100%; }
+/* line 357, /vagrant/sass/_general.scss */
+#face-products-view .tab-content .product-lines li.on span, #eyes-products-view .tab-content .product-lines li.on span, #lips-products-view .tab-content .product-lines li.on span, #hairstyles-products-view .tab-content .product-lines li.on span { padding: 0; font-size: 16px; font-weight: 400; }
+
+/* line 368, /vagrant/sass/_general.scss */
+.tab-content { position: relative; }
+/* line 372, /vagrant/sass/_general.scss */
+.tab-content.select-product-line, .tab-content.select-click-look { height: 100%; }
+/* line 382, /vagrant/sass/_general.scss */
+.tab-content.select-product-line .product-lines-list, .tab-content.select-product-line .click-look-list, .tab-content.select-click-look .product-lines-list, .tab-content.select-click-look .click-look-list { height: 100%; }
+
+/* line 388, /vagrant/sass/_general.scss */
+.scroll-button { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); margin: 0; width: 22px; height: 22px; cursor: pointer; z-index: 1; background-position: center; background-size: cover; background-repeat: no-repeat; font-size: 0; }
+/* line 402, /vagrant/sass/_general.scss */
+.scroll-button.scroll-button-prev { left: 0; right: auto; background-image: url("assets/images/Arrow-left.png"); }
+/* line 407, /vagrant/sass/_general.scss */
+.scroll-button.scroll-button-next { left: auto; right: 0; background-image: url("assets/images/Arrow-right.png"); }
+/* line 412, /vagrant/sass/_general.scss */
+.scroll-button.disabled { opacity: 0.35; pointer-events: none; }
+/* line 416, /vagrant/sass/_general.scss */
+.scroll-button.mobile-visible { display: none; }
+@media (min-width: 629px) { /* line 416, /vagrant/sass/_general.scss */
+  .scroll-button.mobile-visible { display: none!important; } }
+
+/* line 424, /vagrant/sass/_general.scss */
+.color-studio-navigation { font-size: 13px; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-align: left; vertical-align: top; }
+/* line 432, /vagrant/sass/_general.scss */
+.color-studio-navigation:not(.wrapper) { display: none; letter-spacing: -0.34em; width: 100%; overflow-x: scroll; padding-bottom: 20px; }
+/* line 438, /vagrant/sass/_general.scss */
+.color-studio-navigation:not(.wrapper) li { letter-spacing: normal; }
+/* line 443, /vagrant/sass/_general.scss */
+.color-studio-navigation.main-nav { display: block; position: absolute; top: 0; left: 6px; right: 0; height: 36px; line-height: 36px; z-index: 12; font-family: "GothamHTF-Book"; font-size: 18px; }
+@media (max-width: 628px) { /* line 443, /vagrant/sass/_general.scss */
+  .color-studio-navigation.main-nav { right: 28px; height: 36px; line-height: 36px; } }
+/* line 459, /vagrant/sass/_general.scss */
+.color-studio-navigation.main-nav.without-scroll-buttons { left: 0; right: 0; }
+/* line 463, /vagrant/sass/_general.scss */
+.color-studio-navigation.main-nav .color-studio-navigation { font-size: inherit; }
+/* line 465, /vagrant/sass/_general.scss */
+.color-studio-navigation.main-nav .color-studio-navigation a { font-family: inherit; }
+/* line 469, /vagrant/sass/_general.scss */
+.route-home .color-studio-navigation.main-nav { display: none; }
+/* line 475, /vagrant/sass/_general.scss */
+body.route-select-face .color-studio-navigation.face { display: inline-block; }
+/* line 481, /vagrant/sass/_general.scss */
+body.route-select-eyes .color-studio-navigation.eyes { display: inline-block; }
+/* line 487, /vagrant/sass/_general.scss */
+body.route-select-lips .color-studio-navigation.lips { display: inline-block; }
+/* line 493, /vagrant/sass/_general.scss */
+body.route-select-hairstyles .color-studio-navigation.hairstyles { display: inline-block; }
+/* line 499, /vagrant/sass/_general.scss */
+body.route-select-eyewear .color-studio-navigation.eyewear { display: inline-block; }
+/* line 505, /vagrant/sass/_general.scss */
+body.route-select-jewelry .color-studio-navigation.jewelry { display: inline-block; }
+/* line 511, /vagrant/sass/_general.scss */
+body.route-select-headwear .color-studio-navigation.headwear { display: inline-block; }
+/* line 516, /vagrant/sass/_general.scss */
+.color-studio-navigation li { display: inline-block; position: relative; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; background: transparent; text-align: center; }
+/* line 525, /vagrant/sass/_general.scss */
+.color-studio-navigation li.inactive { display: none; opacity: .5; }
+/* line 528, /vagrant/sass/_general.scss */
+.color-studio-navigation li.inactive a { cursor: default; }
+/* line 533, /vagrant/sass/_general.scss */
+.color-studio-navigation li a { display: block; color: #595959; text-decoration: none; padding: 0 10px; font-family: Arial, sans-serif; position: relative; }
+@media (max-width: 628px) { /* line 533, /vagrant/sass/_general.scss */
+  .color-studio-navigation li a { padding: 0 6px; } }
+/* line 544, /vagrant/sass/_general.scss */
+.color-studio-navigation li a:after { display: none; content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background-color: #f32837; }
+/* line 556, /vagrant/sass/_general.scss */
+.color-studio-navigation li.active a { color: #f32837; }
+/* line 558, /vagrant/sass/_general.scss */
+.color-studio-navigation li.active a:after { display: block; }
+/* line 568, /vagrant/sass/_general.scss */
+body.route-select-face #face-products-view .color-studio-navigation, body.route-select-eyes #eyes-products-view .color-studio-navigation, body.route-select-lips #lips-products-view .color-studio-navigation, body.route-select-hairstyles #hairstyles-products-view .color-studio-navigation { margin: 0 20px; }
+/* line 570, /vagrant/sass/_general.scss */
+body.route-select-face #face-products-view .color-studio-navigation .active a, body.route-select-eyes #eyes-products-view .color-studio-navigation .active a, body.route-select-lips #lips-products-view .color-studio-navigation .active a, body.route-select-hairstyles #hairstyles-products-view .color-studio-navigation .active a { color: #f32837; }
+
+/* line 576, /vagrant/sass/_general.scss */
+#select-product-color-view { z-index: 100; top: 38px; padding-left: 20px; height: 90%; background-color: #fff; position: absolute; width: 465px; }
+/* line 584, /vagrant/sass/_general.scss */
+#select-product-color-view .title, #select-product-color-view img.product-line { display: inline-block; margin-top: 20px; }
+/* line 589, /vagrant/sass/_general.scss */
+#select-product-color-view img.product-line { max-width: 230px; }
+/* line 593, /vagrant/sass/_general.scss */
+#select-product-color-view .title { max-width: 200px; }
+/* line 597, /vagrant/sass/_general.scss */
+#select-product-color-view .colors { overflow: hidden; }
+/* line 600, /vagrant/sass/_general.scss */
+#select-product-color-view .colors-list { overflow: scroll; white-space: nowrap; width: 106%; }
+/* line 604, /vagrant/sass/_general.scss */
+#select-product-color-view .colors-list li { cursor: pointer; display: inline-block; }
+/* line 608, /vagrant/sass/_general.scss */
+#select-product-color-view .colors-list li img { width: 60px; height: 60px; }
+/* line 615, /vagrant/sass/_general.scss */
+body.subroute-product #select-product-color-view { display: block; }
+/* line 618, /vagrant/sass/_general.scss */
+body:not(.subroute-product) #select-product-color-view { display: none; }
+
+/* line 623, /vagrant/sass/_general.scss */
+#work-page { position: absolute; left: 4px; right: 4px; height: 208px; top: 0; -webkit-transform: translateY(-100%); transform: translateY(-100%); border-bottom: 1px solid #000; }
+@media (max-width: 628px) { /* line 623, /vagrant/sass/_general.scss */
+  #work-page { height: 190px; padding: 0; left: 0; right: 0; } }
+
+/* line 642, /vagrant/sass/_general.scss */
+.views-wrapper { position: relative; width: 100%; height: 100%; }
+
+/* line 650, /vagrant/sass/_general.scss */
+main.mobile .jcrop-hline, main.mobile .jcrop-vline { background: transparent; }
+/* line 655, /vagrant/sass/_general.scss */
+main.mobile .jcrop-handle.ord-n, main.mobile .jcrop-handle.ord-s, main.mobile .jcrop-handle.ord-e, main.mobile .jcrop-handle.ord-w { display: none; }
+/* line 660, /vagrant/sass/_general.scss */
+main.mobile .jcrop-handle { background: url("assets/images/dotCrop.png"); background-size: contain; width: 17px; height: 17px; border: none; opacity: 1!important; }
+/* line 668, /vagrant/sass/_general.scss */
+main.mobile .jcrop-handle.ord-ne { margin-right: -8px !important; margin-top: -8px !important; }
+/* line 673, /vagrant/sass/_general.scss */
+main.mobile .jcrop-handle.ord-nw { margin-left: -8px !important; margin-top: -8px !important; }
+/* line 677, /vagrant/sass/_general.scss */
+main.mobile .jcrop-handle.ord-se { margin-bottom: -8px !important; margin-right: -8px !important; }
+/* line 681, /vagrant/sass/_general.scss */
+main.mobile .jcrop-handle.ord-sw { margin-bottom: -8px !important; margin-left: -8px !important; }
+/* line 687, /vagrant/sass/_general.scss */
+main.mobile .jcrop-holder > div:first-child { border: 2px solid #595959; }
+
+/*----------------------------------------*\ WELCOME PAGE
+\*----------------------------------------*/
+/* line 5, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page { position: absolute; left: 0; right: 0; height: 100%; bottom: 0; }
+/* line 12, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page #faces-list { text-align: center; align-items: center; height: 100%; }
+/* line 18, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .faces-list-wrapper { position: absolute; font-size: 12px; width: calc(100% - 40px); bottom: 0; height: calc(100% - 1.4em - 22px); }
+@media (max-width: 628px) { /* line 18, /vagrant/sass/views/_welcome-page.scss */
+  #welcome-page .faces-list-wrapper { height: calc(100% - 1.4em - 11px); width: calc(100% - 20px); } }
+/* line 29, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .faces-list-wrapper .faces-list-container { position: static; margin: 0 25px; height: 100%; }
+/* line 39, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .faces-list-wrapper .swiper-button-prev, #welcome-page .faces-list-wrapper .swiper-button-next { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); margin: 0; width: 22px; height: 22px; cursor: pointer; z-index: 1; background-position: center; background-size: cover; background-repeat: no-repeat; font-size: 0; }
+/* line 58, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .faces-list-wrapper .swiper-button-prev { left: 0; background-image: url("assets/images/Arrow-left.png"); }
+/* line 66, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .faces-list-wrapper .swiper-button-next { right: 0; background-image: url("assets/images/Arrow-right.png"); }
+/* line 75, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .select-face { position: relative; display: inline-block; vertical-align: top; width: calc(100% - 150px); height: 100%; text-align: left; padding-left: 30px; padding-right: 10px; font-size: 14px; }
+@media (max-width: 628px) { /* line 75, /vagrant/sass/views/_welcome-page.scss */
+  #welcome-page .select-face { padding-left: 20px; padding-right: 0; width: calc(100% - 114px); } }
+/* line 95, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .select-face h2 { font-family: "GothamHTF-Medium"; font-size: 12px; line-height: 1.4em; margin-top: 15px; margin-left: 33px; margin-bottom: 7px; text-transform: none; overflow: visible; text-transform: uppercase; }
+@media (max-width: 628px) { /* line 95, /vagrant/sass/views/_welcome-page.scss */
+  #welcome-page .select-face h2 { font-size: 14px; padding-left: 0; margin-top: 5px; margin-left: 25px; margin-bottom: 5px; } }
+/* line 115, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .select-face li { display: inline-block; position: relative; overflow: hidden; cursor: pointer; width: calc(100%/3); height: 100%; max-width: 131px; min-width: 90px; padding: 2px 5px; }
+@media (max-width: 628px) { /* line 115, /vagrant/sass/views/_welcome-page.scss */
+  #welcome-page .select-face li { width: calc(100%/2); padding: 2px; } }
+/* line 136, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .select-face li img { width: 100%; }
+/* line 140, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .select-face li span { border: 1px solid #ddd; position: relative; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 100%; max-height: 100%; display: inline-block; vertical-align: top; overflow: hidden; }
+/* line 152, /vagrant/sass/views/_welcome-page.scss */
+body:not(.no-hover) #welcome-page .select-face li span:hover { box-shadow: 0 0px 7px #888888; }
+/* line 154, /vagrant/sass/views/_welcome-page.scss */
+body:not(.no-hover) #welcome-page .select-face li span:hover .face-hover { top: 0; opacity: 0.7; }
+/* line 161, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .select-face li span .face-hover { position: absolute; top: 100%; left: 0; right: 0; bottom: 0; display: block; padding-top: 46%; font-size: 14px; color: #ffffff; background: #000000; word-break: break-word; text-align: center; }
+/* line 177, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .select-face li span + .face-hover { position: absolute; top: 100%; left: 1px; right: 1px; bottom: 1px; display: block; padding-top: 46%; font-size: 14px; color: #ffffff; background: #000000; word-break: break-word; text-align: center; }
+/* line 194, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .select-face .delimeter-text { display: none; position: absolute; top: 0; left: 0; height: 100%; width: 0; border-left: 1px solid #000; font-size: 12px; }
+/* line 203, /vagrant/sass/views/_welcome-page.scss */
+.route-home #welcome-page .select-face .delimeter-text { display: block; }
+/* line 206, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .select-face .delimeter-text > span { position: absolute; width: 30px; height: 30px; line-height: 30px; text-align: center; font-size: 12px; left: 0; top: 50%; -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); background-color: #000; color: white; border-radius: 50%; }
+/* line 224, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .select-face .delimeter-text.delimeter-text_long > span { background-color: white; z-index: 2; }
+/* line 229, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .select-face .delimeter-text.delimeter-text_long:before { left: 50%; width: 0; margin-left: -1px; border-right: 2px dotted #b09157; background: none; z-index: 1; }
+/* line 243, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .use-own-photo { float: left; display: inline-block; width: 150px; vertical-align: top; height: 100%; text-align: center; position: relative; top: -12px; line-height: 1.4; }
+@media (max-width: 628px) { /* line 243, /vagrant/sass/views/_welcome-page.scss */
+  #welcome-page .use-own-photo { width: 114px; } }
+/* line 258, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .use-own-photo ul { height: 100%; font-family: "Raleway-Medium"; }
+@media (max-width: 628px) { /* line 258, /vagrant/sass/views/_welcome-page.scss */
+  #welcome-page .use-own-photo ul { padding-top: 27px; } }
+/* line 268, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .use-own-photo li { position: relative; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); display: block; width: 100%; height: auto; margin: 0 auto; font-size: 15px; color: black; cursor: pointer; text-align: center; }
+/* line 283, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .use-own-photo li .background-image { height: 64px; width: 100%; background-position: center; background-repeat: no-repeat; background-size: contain; }
+@media (max-width: 628px) { /* line 268, /vagrant/sass/views/_welcome-page.scss */
+  #welcome-page .use-own-photo li { top: 0; -webkit-transform: none; transform: none; width: 100%; } }
+/* line 300, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .use-own-photo li input#upload[type="file"] { position: absolute; width: 100%; height: 100%; opacity: 0; cursor: pointer; letter-spacing: 20px; }
+/* line 310, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .use-own-photo li.from-facebook { display: none; }
+/* line 312, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .use-own-photo li span { display: block; font-size: 12px; max-width: 110px; margin: auto; text-transform: uppercase; font-family: "GothamHTF-Medium"; }
+@media (max-width: 628px) { /* line 312, /vagrant/sass/views/_welcome-page.scss */
+  #welcome-page .use-own-photo li span { font-size: 15px; line-height: 1.1em; } }
+/* line 327, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .use-own-photo li.upload-photo { margin-bottom: 19px; }
+/* line 333, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .use-own-photo li.upload-photo .background-image { background-image: url("../images/upload-icon.png"); height: 48px; margin-top: 8px; }
+/* line 339, /vagrant/sass/views/_welcome-page.scss */
+body.subroute-upload #welcome-page .use-own-photo li.upload-photo { background-position: -232px -102px; }
+@media (max-width: 628px) { /* line 341, /vagrant/sass/views/_welcome-page.scss */
+  #welcome-page .use-own-photo li.take-picture { display: none; } }
+/* line 345, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .use-own-photo li.take-picture .background-image { background-image: url("../images/camera-icon.png"); height: 42px; margin-top: 10px; }
+/* line 351, /vagrant/sass/views/_welcome-page.scss */
+body.subroute-webcam #welcome-page .use-own-photo li.take-picture { background-position: -232px -221px; }
+/* line 354, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .use-own-photo li.from-facebook { background-position: -40px -300px; }
+/* line 357, /vagrant/sass/views/_welcome-page.scss */
+body.subroute-facebook #welcome-page .use-own-photo li.from-facebook { background-position: -232px -300px; }
+/* line 362, /vagrant/sass/views/_welcome-page.scss */
+#welcome-page .use-own-photo h2 { max-width: 232px; overflow: visible; font-size: 20px; }
+
+/* line 371, /vagrant/sass/views/_welcome-page.scss */
+body.route-home #fileReaderFlashContainer { z-index: 600; }
+
+/* line 376, /vagrant/sass/views/_welcome-page.scss */
+body #fileReaderFlashContainer, body.subroute-from-facebook #fileReaderFlashContainer { z-index: -1; }
+
+/* line 380, /vagrant/sass/views/_welcome-page.scss */
+body.route-home #vme-wrapper { height: auto!important; }
+
+/*----------------------------------------*\ SELECT-FACE VIEW
+\*----------------------------------------*/
+/* line 5, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view { position: absolute; top: 8px; left: 10px; width: 450px; height: auto; }
+/* line 13, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .select-face { position: relative; float: left; width: 214px; text-align: left; }
+/* line 22, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .select-face h2 { margin-bottom: 14px; font-size: 20px; padding-left: 14px; }
+/* line 28, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .select-face li { display: block; float: left; position: relative; overflow: hidden; cursor: pointer; width: 50%; height: 0; padding-top: 65%; }
+/* line 40, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .select-face li span { position: relative; display: block; overflow: hidden; position: absolute; top: 1px; left: 1px; right: 1px; bottom: 1px; }
+/* line 55, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .select-face li span img { min-width: 100%; max-width: 100%; }
+/* line 61, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .select-face li span + .face-hover { position: absolute; top: 100%; left: 1px; right: 1px; bottom: 1px; display: block; padding-top: 46%; font-size: 14px; color: #ffffff; background: #000000; word-break: break-word; text-align: center; }
+/* line 78, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .select-face .delimeter-text { display: none; position: absolute; top: 42px; left: 100%; height: 268px; margin-left: 10px; line-height: 268px; text-align: center; vertical-align: middle; }
+/* line 89, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .select-face .delimeter-text > span { position: relative; display: inline-block; letter-spacing: -1px; font-size: 12px; line-height: 32px; min-width: 35px; }
+/* line 98, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .select-face .delimeter-text:before { position: absolute; left: 0; top: 0; display: block; width: 100%; height: 100%; background: url("../images/color-studio-sprite.png") 0 -101px; content: ""; }
+/* line 111, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .select-face .delimeter-text.delimeter-text_long > span { background-color: white; z-index: 2; }
+/* line 116, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .select-face .delimeter-text.delimeter-text_long:before { left: 50%; width: 0; margin-left: -1px; border-right: 2px dotted #b09157; background: none; z-index: 1; }
+/* line 128, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .select-face h2 { max-height: 15px; overflow: visible; }
+/* line 135, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .use-own-photo { float: right; width: 232px; text-align: center; }
+/* line 142, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .use-own-photo ul { margin-top: 12px; }
+/* line 144, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .use-own-photo li { position: relative; display: block; width: 191px; height: 118px; margin: 0 auto 40px; background: url("../images/color-studio-sprite.png"); font-size: 15px; color: black; cursor: pointer; }
+/* line 146, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .use-own-photo li input#upload[type="file"] { position: absolute; width: 100%; height: 100%; opacity: 0; cursor: pointer; letter-spacing: 20px; }
+/* line 166, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .use-own-photo li.from-facebook { display: none; }
+/* line 168, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .use-own-photo li span { display: block; padding-top: 96px; text-transform: lowercase; }
+/* line 170, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .use-own-photo li.upload-photo { background-position: -40px -102px; }
+/* line 171, /vagrant/sass/views/_select-face-view.scss */
+body.subroute-upload #select-face-view .use-own-photo li.upload-photo { background-position: -232px -102px; }
+/* line 173, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .use-own-photo li.take-picture { background-position: -40px -221px; }
+/* line 174, /vagrant/sass/views/_select-face-view.scss */
+body.subroute-webcam #select-face-view .use-own-photo li.take-picture { background-position: -232px -221px; }
+/* line 176, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .use-own-photo li.from-facebook { background-position: -40px -300px; }
+/* line 177, /vagrant/sass/views/_select-face-view.scss */
+body.subroute-facebook #select-face-view .use-own-photo li.from-facebook { background-position: -232px -300px; }
+/* line 185, /vagrant/sass/views/_select-face-view.scss */
+#select-face-view .use-own-photo h2 { max-width: 232px; overflow: visible; font-size: 20px; }
+
+/* line 197, /vagrant/sass/views/_select-face-view.scss */
+body.route-select-face #fileReaderFlashContainer, body.state-competition-step3 #fileReaderFlashContainer { z-index: 600; }
+
+/* line 203, /vagrant/sass/views/_select-face-view.scss */
+body #fileReaderFlashContainer, body.subroute-from-facebook #fileReaderFlashContainer, body.state-competition-step3-loaded #fileReaderFlashContainer { z-index: -1; }
+
+/* line 209, /vagrant/sass/views/_select-face-view.scss */
+body:not(.no-hover) #select-face-view .select-face li:hover { box-shadow: 0 2px 7px #888888; }
+/* line 211, /vagrant/sass/views/_select-face-view.scss */
+body:not(.no-hover) #select-face-view .select-face li:hover span + .face-hover { top: 1px; opacity: 0.7; }
+/* line 214, /vagrant/sass/views/_select-face-view.scss */
+body:not(.no-hover) #select-face-view .use-own-photo li.upload-photo:hover { background-position: -232px -102px; }
+/* line 215, /vagrant/sass/views/_select-face-view.scss */
+body:not(.no-hover) #select-face-view .use-own-photo li.take-picture:hover { background-position: -232px -221px; }
+/* line 216, /vagrant/sass/views/_select-face-view.scss */
+body:not(.no-hover) #select-face-view .use-own-photo li.from-facebook:hover { background-position: -232px -300px; }
+
+/*----------------------------------------*\ SELECT-LENS VIEW
+\*----------------------------------------*/
+/* line 5, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view { position: absolute; top: 0; left: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 478px; height: 375px; }
+/* line 14, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view #lenses-list { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 40px 0 20px; height: 375px; width: 468px; overflow-y: auto; }
+/* line 23, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view h2 { position: relative; overflow: hidden; }
+/* line 27, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view h2:after { content: ''; position: absolute; width: 100%; height: 1px; margin-top: .5em; margin-left: .5em; background: url("../images/bg/customise-look-tabs-bottom-line.png"); background-size: 100% 100%; }
+/* line 38, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .lenses { min-height: 120px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-bottom: 0; font-size: 0; }
+/* line 45, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .lenses li { position: relative; display: inline-block; width: 50%; height: 125px; margin-top: 0; margin-left: 0; margin-right: -5px; margin-bottom: 0; text-align: center; vertical-align: middle; cursor: pointer; }
+/* line 57, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .lenses li i { display: block; margin: auto; width: 89px; height: 85px; }
+/* line 63, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .lenses li img { position: relative; top: 10px; width: 70%; height: auto; }
+/* line 70, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .lenses li span { display: block; padding: 0 5px; font-size: 11px; text-transform: uppercase; font-weight: 700; }
+/* line 76, /vagrant/sass/views/_select-lens-view.scss */
+.alcon-russia #select-lens-view .lenses li span { font-size: 9px; font-family: Arial; }
+/* line 83, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .lenses li.on img { top: 0; width: 100%; }
+/* line 87, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .lenses li.on span { padding: 0; font-size: 16px; font-weight: 400; }
+/* line 91, /vagrant/sass/views/_select-lens-view.scss */
+.alcon-russia #select-lens-view .lenses li.on span { font-size: 10px; font-weight: 700; }
+/* line 99, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .view-controls-wrap { display: inline-block; text-align: center; min-width: 320px; }
+/* line 103, /vagrant/sass/views/_select-lens-view.scss */
+body.Alcon-one #select-lens-view .view-controls-wrap { min-width: 255px; }
+/* line 107, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .view-controls { display: none; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; height: 99px; padding: 0 15px 0; }
+/* line 116, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .view-controls .comment { margin-top: 15px; text-align: left; font-weight: bold; }
+/* line 122, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .view-controls .disclaimer-wrap { position: absolute; bottom: 0; left: 5px; text-align: left; font-size: 11px; line-height: 1em; }
+/* line 131, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .view-controls .disclaimer { letter-spacing: -0.02em; padding-right: 40px; color: #67746c; }
+/* line 137, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .view-controls a { display: inline-block; vertical-align: middle; font-size: 12px; line-height: 1.6; font-weight: bold; }
+/* line 145, /vagrant/sass/views/_select-lens-view.scss */
+body.alcon-mexico #select-lens-view .view-controls a, body.alcon-brazil #select-lens-view .view-controls a, body.alcon-czech #select-lens-view .view-controls a { font-size: 10px; }
+/* line 148, /vagrant/sass/views/_select-lens-view.scss */
+body.alcon-italy #select-lens-view .view-controls a { letter-spacing: -0.05em; }
+/* line 151, /vagrant/sass/views/_select-lens-view.scss */
+.alcon-russia #select-lens-view .view-controls a { font-size: 10px; line-height: 20px; }
+/* line 157, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .view-controls a.btn-clear-smart-match, #select-lens-view .view-controls a.btn-smart-match { margin-right: 25px; }
+/* line 161, /vagrant/sass/views/_select-lens-view.scss */
+body.alcon-brazil #select-lens-view .view-controls a.btn-clear-smart-match, body.alcon-czech #select-lens-view .view-controls a.btn-clear-smart-match, body.alcon-brazil #select-lens-view .view-controls a.btn-smart-match, body.alcon-czech #select-lens-view .view-controls a.btn-smart-match { margin-right: 15px; }
+/* line 167, /vagrant/sass/views/_select-lens-view.scss */
+body.alcon-portugal #select-lens-view .view-controls a.btn-clear-smart-match, body.alcon-poland #select-lens-view .view-controls a.btn-clear-smart-match, body.alcon-mexico #select-lens-view .view-controls a.btn-clear-smart-match, body.alcon-portugal #select-lens-view .view-controls a.btn-smart-match, body.alcon-poland #select-lens-view .view-controls a.btn-smart-match, body.alcon-mexico #select-lens-view .view-controls a.btn-smart-match { margin-right: 5px; }
+/* line 170, /vagrant/sass/views/_select-lens-view.scss */
+body.alcon-russia #select-lens-view .view-controls a.btn-clear-smart-match, body.alcon-russia #select-lens-view .view-controls a.btn-smart-match { margin-right: 10px; }
+/* line 175, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .view-controls a.btn-clear-lens { font-size: 13px; line-height: 1.6; font-weight: bold; text-align: right; margin: 0; color: #89642c; max-width: 86px; position: relative; top: 1px; right: 5px; }
+/* line 186, /vagrant/sass/views/_select-lens-view.scss */
+body.alcon-lc #select-lens-view .view-controls a.btn-clear-lens { color: #000; }
+/* line 189, /vagrant/sass/views/_select-lens-view.scss */
+body.alcon-turkey #select-lens-view .view-controls a.btn-clear-lens { max-width: 105px; }
+/* line 192, /vagrant/sass/views/_select-lens-view.scss */
+.alcon-russia #select-lens-view .view-controls a.btn-clear-lens { font-size: 11px; }
+/* line 195, /vagrant/sass/views/_select-lens-view.scss */
+body.alcon-czech #select-lens-view .view-controls a.btn-clear-lens { font-size: 10px; margin-right: 0; right: 0; }
+/* line 200, /vagrant/sass/views/_select-lens-view.scss */
+body.alcon-brazil #select-lens-view .view-controls a.btn-clear-lens { font-size: 10px; margin-right: 0; right: 0; }
+/* line 209, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .stretch-clns { text-align: justify; line-height: 0; }
+/* line 212, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .stretch-clns:after { width: 100%; height: 0; visibility: hidden; overflow: hidden; content: ''; display: inline-block; }
+/* line 220, /vagrant/sass/views/_select-lens-view.scss */
+#select-lens-view .stretch-clns .column { display: inline-block; vertical-align: bottom; }
+
+/* line 230, /vagrant/sass/views/_select-lens-view.scss */
+body:not(.no-hover) #select-lens-view .lenses li:hover img { top: 0; width: 100%; }
+/* line 234, /vagrant/sass/views/_select-lens-view.scss */
+body:not(.no-hover) #select-lens-view .lenses li:hover span { padding: 0; font-size: 16px; font-weight: 400; }
+/* line 242, /vagrant/sass/views/_select-lens-view.scss */
+body:not(.no-hover).alcon-russia #select-lens-view .lenses li:hover span { font-size: 10px; font-weight: 700; }
+
+/*----------------------------------------*\ STUDIO-NAVIGATION
+\*----------------------------------------*/
+/* line 260, /vagrant/sass/views/_select-lens-view.scss */
+body:not(.no-hover) .color-studio-navigation li:hover a { color: #f32837; }
+/* line 266, /vagrant/sass/views/_select-lens-view.scss */
+body:not(.no-hover) .color-studio-navigation li.inactive:hover a { color: #f32837; }
+
+/* line 9, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view, #select-eyes-view, #select-lips-view, #select-hairstyles-view, #select-click-look-view, #select-eyewear-view, #select-jewelry-view, #select-headwear-view { position: absolute; top: 0; left: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; height: 100%; }
+/* line 19, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view #product-lines-list, #select-eyes-view #product-lines-list, #select-lips-view #product-lines-list, #select-hairstyles-view #product-lines-list, #select-click-look-view #product-lines-list, #select-eyewear-view #product-lines-list, #select-jewelry-view #product-lines-list, #select-headwear-view #product-lines-list { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 40px 0 20px; height: 375px; width: 468px; overflow-y: auto; }
+/* line 29, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines-list, #select-eyes-view .product-lines-list, #select-lips-view .product-lines-list, #select-hairstyles-view .product-lines-list, #select-click-look-view .product-lines-list, #select-eyewear-view .product-lines-list, #select-jewelry-view .product-lines-list, #select-headwear-view .product-lines-list { visibility: hidden; display: block; margin-top: -207px; }
+@media (max-width: 628px) { /* line 29, /vagrant/sass/views/_select-product-line.scss */
+  #select-face-view .product-lines-list, #select-eyes-view .product-lines-list, #select-lips-view .product-lines-list, #select-hairstyles-view .product-lines-list, #select-click-look-view .product-lines-list, #select-eyewear-view .product-lines-list, #select-jewelry-view .product-lines-list, #select-headwear-view .product-lines-list { margin-top: -189px; } }
+/* line 37, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines-list:first-child, #select-eyes-view .product-lines-list:first-child, #select-lips-view .product-lines-list:first-child, #select-hairstyles-view .product-lines-list:first-child, #select-click-look-view .product-lines-list:first-child, #select-eyewear-view .product-lines-list:first-child, #select-jewelry-view .product-lines-list:first-child, #select-headwear-view .product-lines-list:first-child { margin-top: 0; }
+/* line 41, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines-list.active, #select-eyes-view .product-lines-list.active, #select-lips-view .product-lines-list.active, #select-hairstyles-view .product-lines-list.active, #select-click-look-view .product-lines-list.active, #select-eyewear-view .product-lines-list.active, #select-jewelry-view .product-lines-list.active, #select-headwear-view .product-lines-list.active { visibility: visible; }
+/* line 47, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .color-studio-navigation.wrapper, #select-eyes-view .color-studio-navigation.wrapper, #select-lips-view .color-studio-navigation.wrapper, #select-hairstyles-view .color-studio-navigation.wrapper, #select-click-look-view .color-studio-navigation.wrapper, #select-eyewear-view .color-studio-navigation.wrapper, #select-jewelry-view .color-studio-navigation.wrapper, #select-headwear-view .color-studio-navigation.wrapper { width: calc(100% - 248px); float: left; border-bottom: 1px solid #585858; overflow: hidden; height: 22px; }
+@media (max-width: 628px) { /* line 47, /vagrant/sass/views/_select-product-line.scss */
+  #select-face-view .color-studio-navigation.wrapper, #select-eyes-view .color-studio-navigation.wrapper, #select-lips-view .color-studio-navigation.wrapper, #select-hairstyles-view .color-studio-navigation.wrapper, #select-click-look-view .color-studio-navigation.wrapper, #select-eyewear-view .color-studio-navigation.wrapper, #select-jewelry-view .color-studio-navigation.wrapper, #select-headwear-view .color-studio-navigation.wrapper { display: none; } }
+/* line 57, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .color-studio-navigation li, #select-eyes-view .color-studio-navigation li, #select-lips-view .color-studio-navigation li, #select-hairstyles-view .color-studio-navigation li, #select-click-look-view .color-studio-navigation li, #select-eyewear-view .color-studio-navigation li, #select-jewelry-view .color-studio-navigation li, #select-headwear-view .color-studio-navigation li { margin-right: 18px; line-height: 21px; }
+/* line 60, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .color-studio-navigation li:last-of-type, #select-eyes-view .color-studio-navigation li:last-of-type, #select-lips-view .color-studio-navigation li:last-of-type, #select-hairstyles-view .color-studio-navigation li:last-of-type, #select-click-look-view .color-studio-navigation li:last-of-type, #select-eyewear-view .color-studio-navigation li:last-of-type, #select-jewelry-view .color-studio-navigation li:last-of-type, #select-headwear-view .color-studio-navigation li:last-of-type { margin-right: 0; }
+/* line 67, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines, #select-eyes-view .product-lines, #select-lips-view .product-lines, #select-hairstyles-view .product-lines, #select-click-look-view .product-lines, #select-eyewear-view .product-lines, #select-jewelry-view .product-lines, #select-headwear-view .product-lines { height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-bottom: 0; font-size: 0; overflow: hidden; margin: 0 20px; position: static; }
+/* line 79, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines li, #select-eyes-view .product-lines li, #select-lips-view .product-lines li, #select-hairstyles-view .product-lines li, #select-click-look-view .product-lines li, #select-eyewear-view .product-lines li, #select-jewelry-view .product-lines li, #select-headwear-view .product-lines li { display: inline-block; text-align: center; cursor: pointer; vertical-align: top; width: 33%; }
+@media (max-width: 628px) { /* line 79, /vagrant/sass/views/_select-product-line.scss */
+  #select-face-view .product-lines li, #select-eyes-view .product-lines li, #select-lips-view .product-lines li, #select-hairstyles-view .product-lines li, #select-click-look-view .product-lines li, #select-eyewear-view .product-lines li, #select-jewelry-view .product-lines li, #select-headwear-view .product-lines li { width: 49%; } }
+/* line 89, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines li i, #select-eyes-view .product-lines li i, #select-lips-view .product-lines li i, #select-hairstyles-view .product-lines li i, #select-click-look-view .product-lines li i, #select-eyewear-view .product-lines li i, #select-jewelry-view .product-lines li i, #select-headwear-view .product-lines li i { display: block; margin: auto; width: 125px; height: 125px; margin-bottom: 5px; }
+/* line 99, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines li img, #select-eyes-view .product-lines li img, #select-lips-view .product-lines li img, #select-hairstyles-view .product-lines li img, #select-click-look-view .product-lines li img, #select-eyewear-view .product-lines li img, #select-jewelry-view .product-lines li img, #select-headwear-view .product-lines li img { position: relative; max-width: 100%; max-height: calc(100% - 10px); top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+/* line 118, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines li.on img, #select-eyes-view .product-lines li.on img, #select-lips-view .product-lines li.on img, #select-hairstyles-view .product-lines li.on img, #select-click-look-view .product-lines li.on img, #select-eyewear-view .product-lines li.on img, #select-jewelry-view .product-lines li.on img, #select-headwear-view .product-lines li.on img { top: 0; width: 100%; }
+/* line 122, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines li.on span, #select-eyes-view .product-lines li.on span, #select-lips-view .product-lines li.on span, #select-hairstyles-view .product-lines li.on span, #select-click-look-view .product-lines li.on span, #select-eyewear-view .product-lines li.on span, #select-jewelry-view .product-lines li.on span, #select-headwear-view .product-lines li.on span { padding: 0; font-size: 16px; font-weight: 400; }
+/* line 131, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines .swiper-button-prev, #select-face-view .product-lines .swiper-button-next, #select-eyes-view .product-lines .swiper-button-prev, #select-eyes-view .product-lines .swiper-button-next, #select-lips-view .product-lines .swiper-button-prev, #select-lips-view .product-lines .swiper-button-next, #select-hairstyles-view .product-lines .swiper-button-prev, #select-hairstyles-view .product-lines .swiper-button-next, #select-click-look-view .product-lines .swiper-button-prev, #select-click-look-view .product-lines .swiper-button-next, #select-eyewear-view .product-lines .swiper-button-prev, #select-eyewear-view .product-lines .swiper-button-next, #select-jewelry-view .product-lines .swiper-button-prev, #select-jewelry-view .product-lines .swiper-button-next, #select-headwear-view .product-lines .swiper-button-prev, #select-headwear-view .product-lines .swiper-button-next { position: absolute; top: calc(50% - 6px); width: 22px; height: 22px; cursor: pointer; z-index: 1; background-position: center; background-size: cover; background-repeat: no-repeat; font-size: 0; }
+/* line 144, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines .swiper-button-prev, #select-eyes-view .product-lines .swiper-button-prev, #select-lips-view .product-lines .swiper-button-prev, #select-hairstyles-view .product-lines .swiper-button-prev, #select-click-look-view .product-lines .swiper-button-prev, #select-eyewear-view .product-lines .swiper-button-prev, #select-jewelry-view .product-lines .swiper-button-prev, #select-headwear-view .product-lines .swiper-button-prev { left: 2px; background-image: url("assets/images/Arrow-left.png"); }
+/* line 149, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines .swiper-button-next, #select-eyes-view .product-lines .swiper-button-next, #select-lips-view .product-lines .swiper-button-next, #select-hairstyles-view .product-lines .swiper-button-next, #select-click-look-view .product-lines .swiper-button-next, #select-eyewear-view .product-lines .swiper-button-next, #select-jewelry-view .product-lines .swiper-button-next, #select-headwear-view .product-lines .swiper-button-next { right: 0; background-image: url("assets/images/Arrow-right.png"); }
+/* line 156, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines__wrapper, #select-eyes-view .product-lines__wrapper, #select-lips-view .product-lines__wrapper, #select-hairstyles-view .product-lines__wrapper, #select-click-look-view .product-lines__wrapper, #select-eyewear-view .product-lines__wrapper, #select-jewelry-view .product-lines__wrapper, #select-headwear-view .product-lines__wrapper { position: relative; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+/* line 163, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines__label-wrapper, #select-eyes-view .product-lines__label-wrapper, #select-lips-view .product-lines__label-wrapper, #select-hairstyles-view .product-lines__label-wrapper, #select-click-look-view .product-lines__label-wrapper, #select-eyewear-view .product-lines__label-wrapper, #select-jewelry-view .product-lines__label-wrapper, #select-headwear-view .product-lines__label-wrapper { font-weight: 700; display: block; padding: 0 5px; font-size: 11px; text-transform: uppercase; line-height: 1.2em; height: calc(1.2em * 2); overflow: hidden; }
+/* line 175, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines__label-wrapper .product-lines__label, #select-eyes-view .product-lines__label-wrapper .product-lines__label, #select-lips-view .product-lines__label-wrapper .product-lines__label, #select-hairstyles-view .product-lines__label-wrapper .product-lines__label, #select-click-look-view .product-lines__label-wrapper .product-lines__label, #select-eyewear-view .product-lines__label-wrapper .product-lines__label, #select-jewelry-view .product-lines__label-wrapper .product-lines__label, #select-headwear-view .product-lines__label-wrapper .product-lines__label { word-break: break-all; position: relative; display: block; max-height: calc(1.2em * 3); line-height: 1.2em; }
+/* line 181, /vagrant/sass/views/_select-product-line.scss */
+#select-face-view .product-lines__label-wrapper .product-lines__label:after, #select-eyes-view .product-lines__label-wrapper .product-lines__label:after, #select-lips-view .product-lines__label-wrapper .product-lines__label:after, #select-hairstyles-view .product-lines__label-wrapper .product-lines__label:after, #select-click-look-view .product-lines__label-wrapper .product-lines__label:after, #select-eyewear-view .product-lines__label-wrapper .product-lines__label:after, #select-jewelry-view .product-lines__label-wrapper .product-lines__label:after, #select-headwear-view .product-lines__label-wrapper .product-lines__label:after { content: "..."; position: absolute; right: 0; top: calc(1.2em * 4 - 100% - 2px); text-align: left; background-color: white; background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 10px); padding-left: 10px; line-height: calc(1.2em + 2px); }
+
+/* line 2, /vagrant/sass/views/_one-click-look.scss */
+#select-click-look-view { position: absolute; top: 0; left: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; height: 100%; }
+/* line 12, /vagrant/sass/views/_one-click-look.scss */
+#select-click-look-view #product-lines-list { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 40px 0 20px; height: 375px; width: 468px; overflow-y: auto; }
+/* line 22, /vagrant/sass/views/_one-click-look.scss */
+#select-click-look-view .click-looks { height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-bottom: 0; font-size: 0; overflow: hidden; margin: 0 20px; position: static; }
+/* line 33, /vagrant/sass/views/_one-click-look.scss */
+#select-click-look-view .click-looks li { position: relative; display: inline-block; width: 33%; height: 100%; margin-top: 0; margin-left: 0; margin-bottom: 0; text-align: center; vertical-align: middle; cursor: pointer; }
+@media (max-width: 628px) { /* line 33, /vagrant/sass/views/_one-click-look.scss */
+  #select-click-look-view .click-looks li { width: 49%; } }
+/* line 51, /vagrant/sass/views/_one-click-look.scss */
+#select-click-look-view .click-looks li i { display: block; margin: auto; width: 125px; height: 125px; }
+/* line 58, /vagrant/sass/views/_one-click-look.scss */
+#select-click-look-view .click-looks li img { position: relative; max-width: 100%; max-height: calc(100% -  10px); top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+/* line 69, /vagrant/sass/views/_one-click-look.scss */
+#select-click-look-view .click-looks li span { display: block; padding: 0 5px; font-size: 11px; text-transform: uppercase; font-weight: 700; }
+/* line 78, /vagrant/sass/views/_one-click-look.scss */
+#select-click-look-view .click-looks li.on img { top: 0; width: 100%; }
+/* line 82, /vagrant/sass/views/_one-click-look.scss */
+#select-click-look-view .click-looks li.on span { padding: 0; font-size: 16px; font-weight: 400; }
+/* line 91, /vagrant/sass/views/_one-click-look.scss */
+#select-click-look-view .click-looks .swiper-button-prev, #select-click-look-view .click-looks .swiper-button-next { position: absolute; top: calc(50% - 6px); width: 22px; height: 22px; cursor: pointer; z-index: 1; background-position: center; background-size: cover; background-repeat: no-repeat; font-size: 0; }
+/* line 104, /vagrant/sass/views/_one-click-look.scss */
+#select-click-look-view .click-looks .swiper-button-prev { left: 2px; background-image: url("assets/images/Arrow-left.png"); }
+/* line 109, /vagrant/sass/views/_one-click-look.scss */
+#select-click-look-view .click-looks .swiper-button-next { right: 0; background-image: url("assets/images/Arrow-right.png"); }
+
+/*----------------------------------------*\ SMART MATCH VIEW
+\*----------------------------------------*/
+/* line 6, /vagrant/sass/views/_expert-pick-view.scss */
+#expert-pick-view { position: absolute; top: 87px; left: 5px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 454px; height: 378px; padding: 0 15px 10px; border: 1px solid #8b662d; border-radius: 6px 6px 0 0; box-shadow: 0 2px 7px #888888; }
+/* line 23, /vagrant/sass/views/_expert-pick-view.scss */
+#expert-pick-view h5 { position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; height: 25px; margin: 0 -15px; padding: 5px 15px 0; border-bottom: 1px solid #8d662d; border-radius: 4px 4px 0 0; background: url("../images/bg/customise-look-tabs-bottom-line.png"); background-size: 100% 100%; }
+/* line 41, /vagrant/sass/views/_expert-pick-view.scss */
+#expert-pick-view h2 { position: relative; overflow: hidden; }
+/* line 45, /vagrant/sass/views/_expert-pick-view.scss */
+#expert-pick-view h2:after { content: ''; position: absolute; width: 100%; height: 1px; margin-top: .5em; margin-left: .5em; background: url("../images/bg/customise-look-tabs-bottom-line.png"); background-size: 100% 100%; }
+/* line 57, /vagrant/sass/views/_expert-pick-view.scss */
+#expert-pick-view ul { height: 300px; overflow-y: auto; }
+/* line 62, /vagrant/sass/views/_expert-pick-view.scss */
+#expert-pick-view li { margin-top: 20px; }
+/* line 66, /vagrant/sass/views/_expert-pick-view.scss */
+#expert-pick-view .view-controls { position: absolute; right: 15px; bottom: 10px; }
+/* line 70, /vagrant/sass/views/_expert-pick-view.scss */
+#expert-pick-view .view-controls .btn { margin: 0 0 0 10px; }
+/* line 73, /vagrant/sass/views/_expert-pick-view.scss */
+#expert-pick-view .view-controls { text-align: right; }
+/* line 77, /vagrant/sass/views/_expert-pick-view.scss */
+#expert-pick-view .btn { margin-right: 5px; margin-top: 8px; }
+/* line 80, /vagrant/sass/views/_expert-pick-view.scss */
+#expert-pick-view .btn.on span { color: #e1d7a3; background: #000000; }
+
+/*----------------------------------------*\ CUSTOMISE LOOK VIEW
+\*----------------------------------------*/
+/* line 5, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+/* line 13, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view h2 { text-align: left; }
+/* line 17, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view .filters-frames-label { display: none; }
+/* line 24, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view .nav-tabs { border: none; padding: 0; margin-bottom: 0; padding: 0 1px; }
+/* line 29, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view .nav-tabs > li { width: 50%; margin-bottom: 0; padding: 0 1px; }
+/* line 35, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view .nav-tabs > li:not(.active) > a:hover, #customise-look-view .nav-tabs > li:not(.active) > a:focus { color: #ffffff; background: #000000; }
+/* line 41, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view .nav-tabs > li > a { margin: 0; padding: 3px 0 1px; font-size: 18px; line-height: 26px; text-align: center; background: url("../images/bg/customise-look-tabs-bottom-line.png"); background-position: 150px 0; background-color: #ffffff; border: 1px solid #9e7a3b; border-bottom: none; outline: 0; text-decoration: none; cursor: pointer; color: #ffffff; }
+/* line 57, /vagrant/sass/views/_customise-look-view.scss */
+body.pt #customise-look-view .nav-tabs > li > a { font-size: 13px; }
+/* line 60, /vagrant/sass/views/_customise-look-view.scss */
+body.Alcon-one #customise-look-view .nav-tabs > li > a { font-size: 16px; }
+/* line 63, /vagrant/sass/views/_customise-look-view.scss */
+body.alcon-lc #customise-look-view .nav-tabs > li > a { background: #2b6c91; border: 1px solid #2b6c91; }
+/* line 71, /vagrant/sass/views/_customise-look-view.scss */
+body.alcon-lc #customise-look-view .nav-tabs > li.active > a { background: #6eaccb; border: 1px solid #6eaccb; }
+/* line 79, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view .nav-tabs > li:nth-child(2).active a { background-position: -240px 0; }
+/* line 85, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view .nav-tabs > li:nth-child(3) > a { background-position: -242px 0; }
+/* line 90, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view .nav-tabs > li:nth-child(4) > a { background-position: -310px 0; }
+/* line 97, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view .nav-tabs > .active > a { background-position: -3px 0; }
+/* line 104, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view .tabs-base { height: 5px; background: url("../images/bg/customise-look-tabs-bottom-line.png") top left repeat; content: ""; }
+/* line 111, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view .tab-content { height: calc(100% - 36px); width: 100%; }
+/* line 117, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #select-makeup { padding: 10px 0px 0 5px; height: 100%; overflow: auto; }
+/* line 121, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #select-makeup ul { margin: 0; max-height: 240px; overflow-y: auto; list-style: none; overflow-y: auto; font-size: 0; }
+/* line 128, /vagrant/sass/views/_customise-look-view.scss */
+body.Alcon-one #customise-look-view #select-makeup ul { margin-bottom: -10px; }
+/* line 133, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #select-makeup li { display: inline-block; width: 108px; vertical-align: top; border: 3px solid transparent; text-align: center; text-transform: uppercase; color: black; font-size: 11px; font-weight: 700; }
+/* line 147, /vagrant/sass/views/_customise-look-view.scss */
+.Alcon-one #customise-look-view #select-makeup li, .alcon-mexico #customise-look-view #select-makeup li, .alcon-poland #customise-look-view #select-makeup li, .alcon-express #customise-look-view #select-makeup li { font-size: 10px; }
+/* line 151, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #select-makeup li i { box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; display: block; border-radius: 4px; margin: 0 auto 4px; padding: 1px; max-width: 98px; height: auto; overflow: hidden; }
+/* line 162, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #select-makeup li i img { max-width: 100%; height: auto; width: 88px; }
+/* line 169, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #select-makeup li.on { border: 3px solid #b8a570; box-shadow: 0 0 10px #888888; color: black; }
+/* line 178, /vagrant/sass/views/_customise-look-view.scss */
+body.hu #customise-look-view #select-makeup li, body.it #customise-look-view #select-makeup li, body.alcon-walmart #customise-look-view #select-makeup li, body.alcon-sams #customise-look-view #select-makeup li { font-size: 9px; }
+/* line 183, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #select-makeup .disclaimer { font-size: 11px; color: #666666; margin-top: 5px; }
+/* line 187, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #select-makeup .disclaimer p { margin-bottom: 5px; }
+/* line 190, /vagrant/sass/views/_customise-look-view.scss */
+.fr #customise-look-view #select-makeup .disclaimer { font-size: 10px; }
+/* line 195, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #select-makeup #clear-selected-look { margin-right: 10px; }
+/* line 200, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view .filters-and-frames-tab-section { position: relative; margin-bottom: 20px; }
+/* line 205, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view .filters-and-frames-tab-section-clear { position: absolute; right: 20px; top: 1px; background-color: white; padding-left: 12px; }
+/* line 213, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #filters-and-frames { padding: 20px 12px; height: 100%; overflow: auto; }
+/* line 218, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #filters-and-frames h2 { position: relative; margin-left: 9px; margin-bottom: 0; text-align: left; float: left; }
+/* line 224, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #filters-and-frames h2:after { content: ""; position: absolute; left: 100%; top: 50%; display: block; width: 300px; margin-left: .5em; margin-top: -1px; height: 1px; background: url("../images/color-studio-sprite.png"); background-position: -434px -70px; }
+/* line 239, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #filters-and-frames .filters, #customise-look-view #filters-and-frames .frames { clear: both; }
+/* line 243, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #filters-and-frames .filter { font-size: 0; }
+/* line 247, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #filters-and-frames .filters li, #customise-look-view #filters-and-frames .frames li { display: inline-block; padding: 6px; border: 3px solid transparent; text-align: center; vertical-align: top; color: black; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+/* line 258, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #filters-and-frames .filters li img, #customise-look-view #filters-and-frames .frames li img { display: block; margin: 0 auto 4px; }
+/* line 265, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #filters-and-frames .filters li.on, #customise-look-view #filters-and-frames .frames li.on { border: 3px solid #b8a570; box-shadow: 0 0 10px #888888; color: black; background-color: #fff; overflow: hidden; }
+/* line 275, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #filters-and-frames .frames li { max-width: 80px; margin-right: -12px; }
+/* line 280, /vagrant/sass/views/_customise-look-view.scss */
+#customise-look-view #filters-and-frames .filters li { max-width: 145px; }
+/* line 282, /vagrant/sass/views/_customise-look-view.scss */
+body.it #customise-look-view #filters-and-frames .filters li { max-width: 143px; }
+
+/* line 291, /vagrant/sass/views/_customise-look-view.scss */
+body:not(.no-hover) #customise-look-view #select-makeup li:hover:not(.on) { cursor: pointer; }
+/* line 292, /vagrant/sass/views/_customise-look-view.scss */
+body:not(.no-hover) #customise-look-view #select-makeup li:hover:not(.on) i { box-shadow: 0 0 10px #888888; }
+/* line 300, /vagrant/sass/views/_customise-look-view.scss */
+body:not(.no-hover) #customise-look-view #filters-and-frames .filters li:hover:not(.on), body:not(.no-hover) #customise-look-view #filters-and-frames .frames li:hover:not(.on) { cursor: pointer; }
+/* line 300, /vagrant/sass/views/_customise-look-view.scss */
+body:not(.no-hover) #customise-look-view #filters-and-frames .filters li:hover:not(.on) img, body:not(.no-hover) #customise-look-view #filters-and-frames .frames li:hover:not(.on) img { box-shadow: 0 0 10px #888888; }
+
+/*----------------------------------------*\ FREE TRIAL VIEW
+\*----------------------------------------*/
+/* line 5, /vagrant/sass/views/_free-trial.scss */
+#free-trial { position: absolute; bottom: 0; left: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 465px; height: 370px; padding: 10px 20px; background: url("../images/bg/free-trial-bg.png") bottom right no-repeat; }
+/* line 21, /vagrant/sass/views/_free-trial.scss */
+#free-trial article { position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-bottom: 20px; padding: 25px 25px 10px; border: 1px solid #8a642c; border-radius: 6px; box-shadow: 0 0 10px #888888; background: transparent; text-align: center; }
+/* line 39, /vagrant/sass/views/_free-trial.scss */
+#free-trial article .offer-text { min-height: 100px; overflow-y: auto; word-spacing: 0.3em; }
+/* line 44, /vagrant/sass/views/_free-trial.scss */
+body.non-us-market #free-trial article .offer-text a { text-transform: none; }
+/* line 47, /vagrant/sass/views/_free-trial.scss */
+#free-trial article h1, #free-trial article p { text-align: left; }
+/* line 49, /vagrant/sass/views/_free-trial.scss */
+#free-trial article h1 { font-weight: 600; }
+/* line 51, /vagrant/sass/views/_free-trial.scss */
+#free-trial article h2 { margin-bottom: 15px; font-weight: 400; font-size: 16px; letter-spacing: 0.1em; text-transform: none; color: #d2ac67; }
+/* line 63, /vagrant/sass/views/_free-trial.scss */
+#free-trial article p { font-size: 14px; line-height: 18px; }
+/* line 66, /vagrant/sass/views/_free-trial.scss */
+#free-trial article p.small-text { margin-bottom: 0; font-size: 11px; line-height: 14px; }
+/* line 74, /vagrant/sass/views/_free-trial.scss */
+#free-trial article img { margin: 15px 0; }
+/* line 76, /vagrant/sass/views/_free-trial.scss */
+#free-trial article .btn { margin-bottom: -30px; }
+/* line 81, /vagrant/sass/views/_free-trial.scss */
+#free-trial .link-to-offer { display: none; padding-left: 10px; }
+/* line 84, /vagrant/sass/views/_free-trial.scss */
+#free-trial .link-to-offer a { text-decoration: none; }
+/* line 86, /vagrant/sass/views/_free-trial.scss */
+#free-trial .link-to-offer a:hover { text-decoration: none; }
+/* line 87, /vagrant/sass/views/_free-trial.scss */
+#free-trial .link-to-offer a span { text-decoration: underline; }
+/* line 90, /vagrant/sass/views/_free-trial.scss */
+#free-trial .free-trial-links { padding-left: 10px; }
+/* line 94, /vagrant/sass/views/_free-trial.scss */
+#free-trial .print-email-links { margin-top: 40px; }
+/* line 96, /vagrant/sass/views/_free-trial.scss */
+#free-trial .print-email-links .glyphicon-play { font-size: 0.7em; margin-left: 5px; vertical-align: top; line-height: 28px; }
+/* line 104, /vagrant/sass/views/_free-trial.scss */
+#free-trial .print-certificate, #free-trial .email-certificate, #free-trial .separator { position: relative; margin-right: 40px; color: black; text-decoration: none; vertical-align: middle; }
+/* line 110, /vagrant/sass/views/_free-trial.scss */
+#free-trial .print-certificate:hover, #free-trial .email-certificate:hover, #free-trial .separator:hover { color: black; }
+/* line 113, /vagrant/sass/views/_free-trial.scss */
+#free-trial .print-certificate:before, #free-trial .email-certificate:before { background: url("../images/color-studio-sprite.png"); }
+/* line 115, /vagrant/sass/views/_free-trial.scss */
+#free-trial .print-certificate:before { position: absolute; top: -3px; right: -40px; width: 21px; height: 21px; background-position: -901px -81px; content: ""; }
+/* line 126, /vagrant/sass/views/_free-trial.scss */
+#free-trial .email-certificate:before { position: absolute; top: -2px; right: -40px; width: 26px; height: 18px; background-position: -927px -82px; content: ""; }
+/* line 137, /vagrant/sass/views/_free-trial.scss */
+#free-trial .separator { display: inline-block; width: 1px; height: 33px; margin: 0 30px; background: url("../images/color-studio-sprite.png") -423px 0; content: ""; }
+
+/* line 149, /vagrant/sass/views/_free-trial.scss */
+body.authentificated #free-trial .link-to-offer { display: block; }
+/* line 150, /vagrant/sass/views/_free-trial.scss */
+body.authentificated #free-trial .free-trial-links { display: none; }
+
+/*----------------------------------------*\ DOWNLOAD LOOK MODAL
+\*----------------------------------------*/
+/* line 4, /vagrant/sass/views/modals/_download-look-view.scss */
+.download-look-wrapper { text-align: center; }
+/* line 7, /vagrant/sass/views/modals/_download-look-view.scss */
+.download-look-wrapper .directive { text-align: center; font-weight: bold; font-size: 17px; }
+/* line 13, /vagrant/sass/views/modals/_download-look-view.scss */
+.download-look-wrapper img { height: 300px; }
+
+/*----------------------------------------*\ SHARE LOOKS MODAL
+\*----------------------------------------*/
+/* line 4, /vagrant/sass/views/modals/_share-look-view.scss */
+.my-looks { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; height: 90%; overflow-y: auto; /* Base for label styling */ /* checkbox aspect */ /* checked mark aspect */ /* checked mark aspect changes */ }
+/* line 15, /vagrant/sass/views/modals/_share-look-view.scss */
+.my-looks > li { display: inline-block; margin-right: 25px; margin-bottom: 10px; }
+/* line 21, /vagrant/sass/views/modals/_share-look-view.scss */
+.my-looks > li > label { width: 150px; height: 165px; vertical-align: top; overflow: hidden; text-overflow: ellipsis; }
+/* line 7, /vagrant/sass/custom-checkboxes.scss */
+.my-looks [type="checkbox"]:not(:checked), .my-looks [type="checkbox"]:checked { position: absolute; overflow: hidden; clip: rect(0 0 0 0); height: 1px; width: 1px; margin: -1px; padding: 0; border: 0; display: none; }
+/* line 19, /vagrant/sass/custom-checkboxes.scss */
+.my-looks [type="checkbox"]:not(:checked) + label, .my-looks [type="checkbox"]:checked + label { position: relative; padding-left: 45px; cursor: pointer; }
+/* line 27, /vagrant/sass/custom-checkboxes.scss */
+.my-looks [type="checkbox"]:not(:checked) + label:before, .my-looks [type="checkbox"]:checked + label:before { content: ''; position: absolute; left: 0; top: 2px; width: 35px; height: 35px; background: url("../images/color-studio-sprite.png") -965px -36px; }
+/* line 41, /vagrant/sass/custom-checkboxes.scss */
+.my-looks [type="checkbox"]:not(:checked) + label:after, .my-looks [type="checkbox"]:checked + label:after { content: ''; position: absolute; top: 0; left: 4px; width: 33px; height: 28px; background: url("../images/color-studio-sprite.png") -925px -41px; transition: all .2s; }
+/* line 55, /vagrant/sass/custom-checkboxes.scss */
+.my-looks [type="checkbox"]:not(:checked) + label:after { opacity: 0; -webkit-transform: scale(0); transform: scale(0); }
+/* line 60, /vagrant/sass/custom-checkboxes.scss */
+.my-looks [type="checkbox"]:checked + label:after { opacity: 1; -webkit-transform: scale(1); transform: scale(1); }
+/* line 67, /vagrant/sass/custom-checkboxes.scss */
+.my-looks label { font-size: 10px; text-transform: uppercase; text-align: center; }
+/* line 73, /vagrant/sass/custom-checkboxes.scss */
+.my-looks label img { display: block; max-width: 115px; max-height: 130px; margin-bottom: 15px; box-shadow: 0 4px 10px #888888; border: 5px solid #ffffff; }
+
+/*----------------------------------------*\ MAIN WINDOW TABS
+\*----------------------------------------*/
+/* line 5, /vagrant/sass/partials/_navbar.scss */
+.main-nav-block { width: 100%; height: 36px; line-height: 36px; white-space: normal; padding-left: 0; padding-right: 4px; }
+@media (max-width: 628px) { /* line 5, /vagrant/sass/partials/_navbar.scss */
+  .main-nav-block { height: 36px; line-height: 36px; padding: 0 7px; border-top: 1px solid #000; } }
+/* line 21, /vagrant/sass/partials/_navbar.scss */
+.main-nav-block .open-menu { display: inline-block; cursor: pointer; background: url("assets/images/mobile/menu-icon.png") no-repeat; background-position: 50% 5px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width: 29px; height: 40px; position: relative; z-index: 15; }
+@media (max-width: 628px) { /* line 21, /vagrant/sass/partials/_navbar.scss */
+  .main-nav-block .open-menu { height: 45px; width: 23px; background-position: 50% 8px; } }
+/* line 41, /vagrant/sass/partials/_navbar.scss */
+body:not(.no-hover) .main-nav-block .open-menu:hover ~ .main-window-tabs { display: block; }
+/* line 48, /vagrant/sass/partials/_navbar.scss */
+.main-nav-block .main-window-tabs { display: none; position: relative; top: -18px; left: 0; width: 238px; text-transform: uppercase; overflow: hidden; white-space: normal; pointer-events: none; font-size: 14px; background-color: #fff; border: 1px solid #000; box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.22); z-index: 310; }
+@media (max-width: 628px) { /* line 48, /vagrant/sass/partials/_navbar.scss */
+  .main-nav-block .main-window-tabs { font-size: 13px; top: -24px; left: -7px; } }
+/* line 71, /vagrant/sass/partials/_navbar.scss */
+body:not(.no-hover) .main-nav-block .main-window-tabs:hover { display: block; }
+/* line 76, /vagrant/sass/partials/_navbar.scss */
+.main-nav-block .main-window-tabs li { padding: 0 14px 0 14px; cursor: pointer; display: inline-block; position: relative; height: 36px !important; width: 100%; margin-right: 24px; line-height: 36px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; font-family: "GothamHTF-Book"; vertical-align: top; pointer-events: all; background-color: #fff; }
+/* line 94, /vagrant/sass/partials/_navbar.scss */
+body:not(.no-hover) .main-nav-block .main-window-tabs li:hover { background-color: #ccc; }
+/* line 96, /vagrant/sass/partials/_navbar.scss */
+body:not(.no-hover) .main-nav-block .main-window-tabs li:hover a { color: white; }
+/* line 103, /vagrant/sass/partials/_navbar.scss */
+.main-nav-block .main-window-tabs li:not(:first-child):before { content: ""; position: absolute; height: 1px; left: 9px; right: 9px; background: #e0e0e0; }
+/* line 113, /vagrant/sass/partials/_navbar.scss */
+.main-nav-block .main-window-tabs li:hover:before { display: none; }
+/* line 117, /vagrant/sass/partials/_navbar.scss */
+.main-nav-block .main-window-tabs li:hover + li:before { display: none; }
+/* line 125, /vagrant/sass/partials/_navbar.scss */
+.route-home .main-nav-block .main-window-tabs li.welcome-screen a { color: #ff0000; }
+/* line 131, /vagrant/sass/partials/_navbar.scss */
+body:not(.no-hover).route-home .main-nav-block .main-window-tabs li.welcome-screen:hover a { color: #f32837; }
+/* line 139, /vagrant/sass/partials/_navbar.scss */
+.route-select-face .main-nav-block .main-window-tabs li.face a { color: #f32837; }
+/* line 145, /vagrant/sass/partials/_navbar.scss */
+body:not(.no-hover).route-select-face .main-nav-block .main-window-tabs li.face:hover a { color: #f32837; }
+/* line 153, /vagrant/sass/partials/_navbar.scss */
+.route-select-eyes .main-nav-block .main-window-tabs li.eyes a { color: #f32837; }
+/* line 159, /vagrant/sass/partials/_navbar.scss */
+body:not(.no-hover).route-select-eyes .main-nav-block .main-window-tabs li.eyes:hover a { color: #f32837; }
+/* line 167, /vagrant/sass/partials/_navbar.scss */
+.route-select-lips .main-nav-block .main-window-tabs li.lips a { color: #f32837; }
+/* line 173, /vagrant/sass/partials/_navbar.scss */
+body:not(.no-hover).route-select-lips .main-nav-block .main-window-tabs li.lips:hover a { color: #f32837; }
+/* line 181, /vagrant/sass/partials/_navbar.scss */
+.route-select-hairstyles .main-nav-block .main-window-tabs li.hairstyles a { color: #f32837; }
+/* line 187, /vagrant/sass/partials/_navbar.scss */
+body:not(.no-hover).route-select-hairstyles .main-nav-block .main-window-tabs li.hairstyles:hover a { color: #f32837; }
+/* line 195, /vagrant/sass/partials/_navbar.scss */
+.route-select-eyewear .main-nav-block .main-window-tabs li.eyewear a { color: #f32837; }
+/* line 201, /vagrant/sass/partials/_navbar.scss */
+body:not(.no-hover).route-select-eyewear .main-nav-block .main-window-tabs li.eyewear:hover a { color: #f32837; }
+/* line 209, /vagrant/sass/partials/_navbar.scss */
+.route-select-jewelry .main-nav-block .main-window-tabs li.jewelry a { color: #f32837; }
+/* line 215, /vagrant/sass/partials/_navbar.scss */
+body:not(.no-hover).route-select-jewelry .main-nav-block .main-window-tabs li.jewelry:hover a { color: #f32837; }
+/* line 223, /vagrant/sass/partials/_navbar.scss */
+.route-select-headwear .main-nav-block .main-window-tabs li.headwear a { color: #f32837; }
+/* line 229, /vagrant/sass/partials/_navbar.scss */
+body:not(.no-hover).route-select-headwear .main-nav-block .main-window-tabs li.headwear:hover a { color: #f32837; }
+/* line 237, /vagrant/sass/partials/_navbar.scss */
+.route-select-one-click-look .main-nav-block .main-window-tabs li.one-click-look a { color: #f32837; }
+/* line 243, /vagrant/sass/partials/_navbar.scss */
+body:not(.no-hover).route-select-one-click-look .main-nav-block .main-window-tabs li.one-click-look:hover a { color: #f32837; }
+/* line 249, /vagrant/sass/partials/_navbar.scss */
+.main-nav-block .main-window-tabs li.inactive { display: none; opacity: .5; }
+/* line 252, /vagrant/sass/partials/_navbar.scss */
+.main-nav-block .main-window-tabs li.inactive a { cursor: default; }
+/* line 257, /vagrant/sass/partials/_navbar.scss */
+.main-nav-block .main-window-tabs li a { display: block; text-decoration: none; height: 100%; width: 100%; text-transform: none; padding-left: 9px; }
+
+/* line 269, /vagrant/sass/partials/_navbar.scss */
+.main-window-tabs-current-tab { display: inline-block; height: 100%; vertical-align: top; font-size: 18px; text-transform: uppercase; font-family: "GothamHTF-Book"; width: calc(100% - 34px); overflow: hidden; position: relative; padding-left: 18px; }
+@media (max-width: 628px) { /* line 269, /vagrant/sass/partials/_navbar.scss */
+  .main-window-tabs-current-tab { padding-left: 9px; width: calc(100% - 23px); } }
+/* line 286, /vagrant/sass/partials/_navbar.scss */
+.main-window-tabs-current-tab .current-tab { display: none; }
+/* line 289, /vagrant/sass/partials/_navbar.scss */
+.route-home .main-window-tabs-current-tab .current-tab.home { display: block; }
+/* line 294, /vagrant/sass/partials/_navbar.scss */
+.route-select-one-click-look .main-window-tabs-current-tab .current-tab.one-click { display: block; }
+
+/* line 300, /vagrant/sass/partials/_navbar.scss */
+.bg-preloader { width: 60px; height: 60px; margin: 0 auto; display: block!important; background: url("assets/images/icon-preloader.gif") no-repeat; background-size: 100% 100%; }
+
+/*----------------------------------------*\ SIDEBAR
+\*----------------------------------------*/
+/* line 8, /vagrant/sass/partials/_sidebar.scss */
+#share { display: none; position: absolute; top: 0; right: 0; bottom: 0; width: 36.7%; padding: 0 10px; background-color: #fff; }
+@media (max-width: 628px) { /* line 8, /vagrant/sass/partials/_sidebar.scss */
+  #share { width: 206px; top: auto; padding: 0; border: 1px solid #000; right: -1px; bottom: -1px; z-index: 2; } }
+/* line 28, /vagrant/sass/partials/_sidebar.scss */
+#share .share__close { display: none; background-position: center; background-repeat: no-repeat; background-image: url("assets/images/icons/icon-close.png"); background-size: contain; width: 10px; height: 10px; position: absolute; top: 8px; right: 8px; }
+@media (max-width: 628px) { /* line 28, /vagrant/sass/partials/_sidebar.scss */
+  #share .share__close { display: block; } }
+/* line 43, /vagrant/sass/partials/_sidebar.scss */
+#share .share__heading { text-align: center; text-transform: uppercase; font-family: "Raleway-Medium"; font-size: 16px; font-weight: normal; margin: 0; padding: 6px 0; border-bottom: 1px solid #000; }
+@media (max-width: 628px) { /* line 43, /vagrant/sass/partials/_sidebar.scss */
+  #share .share__heading { padding: 6px 10px 6px 0; } }
+/* line 56, /vagrant/sass/partials/_sidebar.scss */
+#share .share__list { height: calc(100% - 52px); display: block; }
+/* line 64, /vagrant/sass/partials/_sidebar.scss */
+#share .share__list-item { width: 100%; margin: auto; cursor: pointer; margin-top: 22px; }
+/* line 69, /vagrant/sass/partials/_sidebar.scss */
+#share .share__list-item a { text-decoration: none; text-transform: initial; }
+/* line 73, /vagrant/sass/partials/_sidebar.scss */
+#share .share__list-item a:hover { text-decoration: none; color: inherit; }
+/* line 79, /vagrant/sass/partials/_sidebar.scss */
+#share .share__label { text-align: center; font-size: 13px; margin-top: 4px; }
+@media (max-width: 628px) { /* line 109, /vagrant/sass/partials/_sidebar.scss */
+  #share .share__label--print { display: none; } }
+/* line 116, /vagrant/sass/partials/_sidebar.scss */
+#share .share__icon { width: 44px; height: 44px; background-position: center; background-repeat: no-repeat; background-size: contain; margin: auto; }
+/* line 129, /vagrant/sass/partials/_sidebar.scss */
+#share .share__icon--print { background-image: url("assets/images/icons/icon-print.png"); }
+@media (max-width: 628px) { /* line 129, /vagrant/sass/partials/_sidebar.scss */
+  #share .share__icon--print { display: none; } }
+/* line 136, /vagrant/sass/partials/_sidebar.scss */
+#share .share__icon--email { background-image: url("assets/images/icons/icon-email.png"); }
+/* line 140, /vagrant/sass/partials/_sidebar.scss */
+#share .share__icon--facebook { background-image: url("assets/images/icons/icon-facebook.png"); }
+/* line 147, /vagrant/sass/partials/_sidebar.scss */
+#share .share__icon--download { background-image: url("assets/images/icons/icon-download.png"); }
+/* line 151, /vagrant/sass/partials/_sidebar.scss */
+#share.disabled { pointer-events: none; }
+/* line 153, /vagrant/sass/partials/_sidebar.scss */
+#share.disabled .share__list-item { opacity: 0.5; }
+
+/* line 160, /vagrant/sass/partials/_sidebar.scss */
+body.state-share #share { display: block; }
+
+/* line 1, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks { display: none; position: relative; top: -70px; right: 295px; height: 253px; border-radius: 0 5px 5px 0; border: 1px solid transparent; border-left: none; border-bottom: none; visibility: hidden; }
+/* line 12, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks h3 { font-size: 12px; text-transform: uppercase; color: black; margin: 20px 0 10px 0; text-align: center; }
+/* line 20, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .slimScrollDiv { left: 80px; }
+/* line 24, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks ul { position: relative; top: 0px; z-index: 10; width: 80px; text-align: center; max-height: 350px; }
+/* line 32, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks ul li { display: block; width: 61px; height: 61px; margin-bottom: 10px; padding: 1px; background: url("../images/bg/model-thumb-bg.png") top center repeat-y; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; }
+/* line 43, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks ul li span { position: relative; display: block; width: 59px; height: 59px; overflow: hidden; }
+/* line 53, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks ul li span img { max-width: 100%; max-height: 100%; }
+/* line 59, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks ul li.add img { width: 100%; height: 100%; }
+/* line 64, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks ul li:last-child { margin-bottom: 0; }
+/* line 69, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks ul.fake-saved-looks-list { display: none; opacity: 0; }
+/* line 75, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks ul:not(.fake-saved-looks-list) li { cursor: pointer; }
+/* line 76, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks ul:not(.fake-saved-looks-list) li:hover, .saved-looks ul:not(.fake-saved-looks-list) li.on { box-shadow: 0 0 3px #888888; }
+/* line 80, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look { position: absolute; top: -6px; right: -160px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; display: none; width: 573px; height: 470px; padding: 8px; background: #6c6c6c; }
+/* line 81, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look .view-mode-headline { position: absolute; left: 366px; top: 25px; width: 180px; font-size: 17px; font-weight: 700; }
+/* line 103, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section { position: relative; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width: 100%; height: 100%; padding: 15px 25px; background: #ffffff; text-align: left; }
+/* line 104, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section:before { position: absolute; content: ""; left: 355px; top: 0; bottom: 0; width: 2px; background-color: #6c6c6c; }
+/* line 126, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .cancel-view { position: absolute; bottom: 5px; right: 15px; display: inline; font-size: 14px; text-decoration: none; }
+/* line 136, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .close-view { position: absolute; top: 7px; right: 5px; display: none; width: 31px; height: 30px; background: url("../images/color-studio-sprite.png") -948px 0; content: ""; }
+/* line 148, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .look-to-save { position: relative; width: 305px; height: 355px; margin: 10px 0; overflow: hidden; outline: 1px solid #000000; text-align: center; }
+/* line 160, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .look-to-save > img { max-width: 100%; max-height: 100%; }
+/* line 166, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .look-to-save .look-info { position: absolute; bottom: 0; text-align: left; }
+/* line 172, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .look-to-save .look-info-header { display: block; width: 305px; height: 35px; background: url("../images/color-studio-sprite.png") 0 -421px; content: ""; cursor: pointer; }
+/* line 184, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .look-to-save ul { position: relative; display: none; padding: 8px; background: #ffffff; line-height: 18px; opacity: 0.9; }
+/* line 195, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .look-to-save ul li { position: relative; }
+/* line 201, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .look-to-save ul li:not(:first-child) { padding: 10px; }
+/* line 205, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .look-to-save ul li:not(:last-child):after { position: absolute; top: 100%; left: 0; display: block; width: 100%; height: 1px; overflow: hidden; background: url("../images/bg/customise-look-tabs-bottom-line.png"); background-size: 100% 100%; content: ""; }
+/* line 223, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .look-to-save ul h2 { padding-bottom: 5px; text-align: center; }
+/* line 228, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .look-to-save ul .h2 { font-size: 12px; }
+/* line 230, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .look-to-save ul span:not(.h2) { font-size: 10px; font-weight: 700; text-transform: uppercase; color: black; }
+/* line 237, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .look-to-save ul span:not(.h2).stand-out { color: #666666; }
+/* line 241, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .look-to-save ul:before { position: absolute; top: 0; right: 5px; display: block; width: 26px; height: 15px; background: url("../images/color-studio-sprite.png") -944px -117px; content: ""; }
+/* line 258, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .input-group, .saved-looks .your-look > section .edit-group { position: relative; }
+/* line 263, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .input-group .btn, .saved-looks .your-look > section .edit-group .btn { position: absolute; top: 0; left: 212px; padding: 8px 30px; }
+/* line 271, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .input-group.on, .saved-looks .your-look > section .edit-group.on { display: block; }
+/* line 277, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .input-group em { display: inline-block; border-radius: 5px; padding: 1px; background: #909090; background-size: 100% 100%; font-style: normal; }
+/* line 285, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .input-group em.validation-error { background: red; }
+/* line 290, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .input-group input { float: none; width: 195px; border-radius: 4px; border: transparent; }
+/* line 299, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .edit-group { display: none; padding-top: 10px; vertical-align: middle; }
+/* line 304, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .edit-group .trash { position: absolute; top: 30px; right: 115px; display: inline-block; width: 29px; height: 27px; background: url("../images/color-studio-sprite.png") -914px 0; content: ""; }
+/* line 316, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look > section .edit-group > span { display: block; font-size: 14px; width: 160px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+/* line 330, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look.view-mode .input-group { display: none; }
+/* line 333, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look.view-mode .edit-group { display: block; }
+/* line 336, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .your-look.view-mode h6.view-mode-headline { display: block; }
+/* line 342, /vagrant/sass/partials/_saved-looks.scss */
+.state-saved-looks .saved-looks { visibility: visible; z-index: 150; border: 1px solid #936e33; background: url("../images/bg/your-look-bg.png") bottom right repeat; }
+/* line 348, /vagrant/sass/partials/_saved-looks.scss */
+.state-saved-looks .saved-looks .your-look { display: block; }
+/* line 356, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks .help { display: none; padding: 5px; text-align: center; color: #6c4d27; font-weight: 700; text-transform: uppercase; font-size: 10px; }
+/* line 367, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks.disabled { display: none; }
+/* line 370, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks.disabled.disabled-due-to-auth #saved-looks-list { display: none; }
+/* line 371, /vagrant/sass/partials/_saved-looks.scss */
+.saved-looks.disabled.disabled-due-to-auth .fake-saved-looks-list { display: block; }
+
+/*----------------------------------------*\ WEBCAM
+\*----------------------------------------*/
+/* line 6, /vagrant/sass/partials/_webcam.scss */
+#webcam-wrapper { display: none; }
+/* line 16, /vagrant/sass/partials/_webcam.scss */
+#webcam-wrapper #webcam-container #webcam { position: relative; }
+/* line 22, /vagrant/sass/partials/_webcam.scss */
+#webcam-wrapper #webcam-container #webcam #webcam-face-grid { position: absolute; top: 0; left: 0; display: none; }
+/* line 30, /vagrant/sass/partials/_webcam.scss */
+#webcam-wrapper #webcam-container .webcam-controls { padding: 8px 0; font-size: 0; min-height: 39px; }
+/* line 35, /vagrant/sass/partials/_webcam.scss */
+#webcam-wrapper #webcam-container .webcam-controls .show-guides { width: 41px; height: 34px; display: inline-block; margin: 3px 0 3px 10px; background: url("../images/color-studio-sprite.png") -201px 0; }
+/* line 41, /vagrant/sass/partials/_webcam.scss */
+#webcam-wrapper #webcam-container .webcam-controls .show-guides.active { background: url("../images/color-studio-sprite.png") -201px -34px; }
+/* line 45, /vagrant/sass/partials/_webcam.scss */
+#webcam-wrapper #webcam-container .webcam-controls .take-photo { display: inline-block; width: 58px; height: 39px; margin: 0 0 0 108px; background: url("../images/color-studio-sprite.png") -358px 0px; }
+/* line 53, /vagrant/sass/partials/_webcam.scss */
+#webcam-wrapper #webcam-container .webcam-controls .submit-photo { display: inline-block; }
+/* line 56, /vagrant/sass/partials/_webcam.scss */
+#webcam-wrapper #webcam-container .webcam-controls .submit-photo .take-another { display: inline-block; width: 58px; height: 39px; margin: 0 20px 0 58px; background: url("../images/color-studio-sprite.png") -242px 0; }
+/* line 64, /vagrant/sass/partials/_webcam.scss */
+#webcam-wrapper #webcam-container .webcam-controls .submit-photo .separator { width: 2px; height: 34px; display: inline-block; background: url("../images/color-studio-sprite.png") -423px 0; }
+/* line 71, /vagrant/sass/partials/_webcam.scss */
+#webcam-wrapper #webcam-container .webcam-controls .submit-photo .use-this { display: inline-block; width: 58px; height: 39px; margin: 0 0 0 20px; background: url("../images/color-studio-sprite.png") -300px 0px; }
+/* line 86, /vagrant/sass/partials/_webcam.scss */
+#webcam-wrapper.guides-mode #webcam-container #webcam #webcam-face-grid { display: block; }
+/* line 89, /vagrant/sass/partials/_webcam.scss */
+#webcam-wrapper.guides-mode #webcam-container .webcam-controls .show-guides { background: url("../images/color-studio-sprite.png") -201px -34px; }
+
+/* line 98, /vagrant/sass/partials/_webcam.scss */
+body.subroute-webcam #webcam-wrapper { display: block; }
+
+/* line 105, /vagrant/sass/partials/_webcam.scss */
+body:not(.no-hover) #webcam-wrapper #webcam-container .webcam-controls .show-guides:hover { background: url("../images/color-studio-sprite.png") -201px -34px; }
+/* line 109, /vagrant/sass/partials/_webcam.scss */
+body:not(.no-hover) #webcam-wrapper #webcam-container .webcam-controls .submit-photo .take-another:hover { background: url("../images/color-studio-sprite.png") -242px -39px; }
+/* line 112, /vagrant/sass/partials/_webcam.scss */
+body:not(.no-hover) #webcam-wrapper #webcam-container .webcam-controls .submit-photo .use-this:hover { background: url("../images/color-studio-sprite.png") -300px -39px; }
+
+/* line 1, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper { display: none; position: absolute; top: 0; left: 0px; background: #efefef; width: 100%; height: 100%; border-bottom: 1px solid #8d662d; overflow: hidden; z-index: 99; /* Base for label styling */ /* checkbox aspect */ /* checked mark aspect */ /* checked mark aspect changes */ }
+/* line 13, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbheader { display: block; padding: 5px; height: 25px; background: url("../images/bg/customise-look-tabs-bottom-line.png"); background-size: 100%; clear: both; margin-bottom: 20px; border: 1px solid #8d662d; border-radius: 6px 6px 0 0; }
+/* line 23, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbheader h5 { float: left; }
+/* line 26, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbheader > button { float: right; }
+/* line 29, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbheader .close-view { outline: none; border: none; }
+/* line 34, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbinner { width: 100%; }
+/* line 37, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .side { display: inline-block; width: 260px; vertical-align: top; padding: 20px; }
+/* line 42, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .side p { font-size: 14px; line-height: 18px; }
+/* line 47, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbImgsWrapper { display: inline-block; width: 580px; background: url("../images/bg/live-demo-vme-bg.png") top center repeat; height: 405px; }
+/* line 52, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbImgsWrapper .fbImgs { display: none; /* hidden by default */ width: 560px; height: 386px; background: grey; overflow: hidden; position: relative; top: 10px; left: 10px; }
+/* line 61, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbImgsWrapper .fbImgs .wrapper { width: 180px; height: 122px; overflow: hidden; display: block; float: left; margin: 0 10px 10px 0; border: 1px solid #6c4d27; box-shadow: 0 0 6px #6c4d27; cursor: pointer; }
+/* line 72, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbImgsWrapper .fbImgs .wrapper:nth-child(3n) { margin-right: 0; }
+/* line 76, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbImgsWrapper .fbImgs #status { position: absolute; top: 0; }
+/* line 80, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbImgsWrapper .fbImgs img { max-width: 180px; }
+/* line 84, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbImgsWrapper .choose-gallery-wrapper { display: none; /* hidden by default */ }
+/* line 86, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbImgsWrapper .choose-gallery-wrapper ul.choose-gallery-list { padding: 20px; width: 580px; height: 356px; overflow-y: auto; }
+/* line 91, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbImgsWrapper .choose-gallery-wrapper ul.choose-gallery-list li { height: 50px; width: 260px; float: left; }
+/* line 95, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbImgsWrapper .choose-gallery-wrapper ul.choose-gallery-list li label { line-height: 40px; }
+/* line 97, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbImgsWrapper .choose-gallery-wrapper ul.choose-gallery-list li label span { line-height: initial; vertical-align: middle; display: inline-block; }
+/* line 105, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .fbImgsWrapper .choose-gallery-wrapper #load-fb-photos { margin-right: 15px; }
+/* line 109, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper.images-mode .fbImgsWrapper .fbImgs { display: block; }
+/* line 110, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper.images-mode .arrow { visibility: visible; }
+/* line 113, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper.galleries-mode .fbImgsWrapper .choose-gallery-wrapper { display: block; }
+/* line 116, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper #prev img { -ms-transform: rotate(180deg); /* IE 9 */ -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */ transform: rotate(180deg); /* Standard syntax */ }
+/* line 122, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .arrow { visibility: hidden; /* hidden by default */ display: inline-block; width: 55px; padding: 0; height: 55px; vertical-align: top; border: none; background: transparent; margin-top: 170px; outline: none; }
+/* line 133, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .arrow span { display: block; height: 100%; }
+/* line 136, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .arrow span p { font-size: 13px; color: #6c4d27; word-break: break-all; }
+/* line 142, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper .arrow img { position: relative; }
+/* line 153, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper [type="checkbox"]:not(:checked), #facebook-wrapper [type="checkbox"]:checked { position: absolute; left: -9999px; }
+/* line 158, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper [type="checkbox"]:not(:checked) + label, #facebook-wrapper [type="checkbox"]:checked + label { position: relative; padding-left: 45px; cursor: pointer; }
+/* line 166, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper [type="checkbox"]:not(:checked) + label:before, #facebook-wrapper [type="checkbox"]:checked + label:before { content: ''; position: absolute; left: 0; top: 2px; width: 35px; height: 35px; background: url("../images/color-studio-sprite.png") -965px -36px; }
+/* line 177, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper [type="checkbox"]:not(:checked) + label:after, #facebook-wrapper [type="checkbox"]:checked + label:after { content: ''; position: absolute; top: 0; left: 4px; width: 33px; height: 28px; background: url("../images/color-studio-sprite.png") -925px -41px; transition: all .2s; }
+/* line 188, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper [type="checkbox"]:not(:checked) + label:after { opacity: 0; -webkit-transform: scale(0); transform: scale(0); }
+/* line 193, /vagrant/sass/partials/_facebook.scss */
+#facebook-wrapper [type="checkbox"]:checked + label:after { opacity: 1; -webkit-transform: scale(1); transform: scale(1); }
+
+/* line 201, /vagrant/sass/partials/_facebook.scss */
+body.subroute-from-facebook #facebook-wrapper { display: block; }
+
+/*----------------------------------------*\ VME
+\*----------------------------------------*/
+/* line 10, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper { max-height: 486px; display: block; right: 0; background: none; width: 100%; margin-top: 208px; position: relative; height: auto; left: 0; }
+@media (max-width: 628px) { /* line 10, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper { max-height: initial; } }
+/* line 17, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .scroll-wrapper { display: none; }
+@media (max-width: 628px) { /* line 17, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .scroll-wrapper { display: block; width: 100%; height: 100%; z-index: 1; position: absolute; } }
+/* line 38, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-retrace-controls { display: none; position: absolute; right: 0; top: 10px; }
+@media (max-width: 628px) { /* line 44, /vagrant/sass/partials/_vme.scss */
+  .state-retrace #vme-wrapper .vme-retrace-controls { display: block; } }
+/* line 49, /vagrant/sass/partials/_vme.scss */
+.subroute-upload #vme-wrapper { display: none; }
+/* line 52, /vagrant/sass/partials/_vme.scss */
+.route-home #vme-wrapper { padding: 0; }
+/* line 54, /vagrant/sass/partials/_vme.scss */
+.route-home #vme-wrapper .vme-placeholder { display: block; position: relative; }
+@media (min-width: 420px) and (max-width: 630px) { /* line 54, /vagrant/sass/partials/_vme.scss */
+  .route-home #vme-wrapper .vme-placeholder { max-height: 460px; } }
+@media (min-width: 320px) and (max-width: 420px) { /* line 54, /vagrant/sass/partials/_vme.scss */
+  .route-home #vme-wrapper .vme-placeholder { max-height: initial; } }
+/* line 66, /vagrant/sass/partials/_vme.scss */
+.route-home #vme-wrapper .vme-placeholder .amazon-block { position: absolute; left: 0; bottom: 0; width: 100%; background-image: url("assets/images/gradient.png"); background-position: center; background-repeat: no-repeat; background-size: cover; font-size: 18px; padding: 6px 10px; line-height: 1.4em; text-align: center; color: #fff; }
+@media (max-width: 628px) { /* line 66, /vagrant/sass/partials/_vme.scss */
+  .route-home #vme-wrapper .vme-placeholder .amazon-block { font-size: 12px; line-height: 20px; } }
+/* line 85, /vagrant/sass/partials/_vme.scss */
+.route-home #vme-wrapper .vme-placeholder .amazon-hint { font-family: "Raleway-Bold"; margin-right: 4px; font-size: 17px; }
+@media (max-width: 628px) { /* line 85, /vagrant/sass/partials/_vme.scss */
+  .route-home #vme-wrapper .vme-placeholder .amazon-hint { margin-right: 0; font-size: inherit; } }
+/* line 94, /vagrant/sass/partials/_vme.scss */
+.route-home #vme-wrapper .vme-placeholder .amazon-img { display: inline-block; vertical-align: top; width: 78px; height: 24px; background-image: url("assets/images/amazon-white.png"); background-position: center; background-size: contain; background-repeat: no-repeat; margin: 2px 0; }
+@media (max-width: 628px) { /* line 94, /vagrant/sass/partials/_vme.scss */
+  .route-home #vme-wrapper .vme-placeholder .amazon-img { height: 20px; width: 58px; } }
+/* line 109, /vagrant/sass/partials/_vme.scss */
+.route-home #vme-wrapper .vme-placeholder .header { display: inline-block; position: absolute; top: 28px; left: -8px; -webkit-transform: rotateZ(-8deg); transform: rotateZ(-8deg); padding: 6px 38px 10px 32px; color: white; background-color: red; font-family: TimesNewRoman, "Times New Roman", Times, serif; font-size: 25px; line-height: 24px; font-style: italic; text-transform: uppercase; text-align: center; }
+@media (max-width: 628px) { /* line 109, /vagrant/sass/partials/_vme.scss */
+  .route-home #vme-wrapper .vme-placeholder .header { top: 8px; padding: 8px 32px 8px 22px; font-size: 21px; line-height: 19px; } }
+/* line 132, /vagrant/sass/partials/_vme.scss */
+.route-home #vme-wrapper .vme-placeholder .swiper-wrapper { height: 481px; }
+@media (max-width: 628px) { /* line 132, /vagrant/sass/partials/_vme.scss */
+  .route-home #vme-wrapper .vme-placeholder .swiper-wrapper { height: inherit; } }
+/* line 138, /vagrant/sass/partials/_vme.scss */
+.route-home #vme-wrapper .vme-placeholder img { width: 100%!important; margin: 0 auto; object-fit: cover; }
+/* line 146, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .face-mobile { display: none; }
+@media (max-width: 628px) { /* line 146, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .face-mobile { display: block; } }
+/* line 152, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .face-desktop { display: block; }
+@media (max-width: 628px) { /* line 152, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .face-desktop { display: none; } }
+@media (max-width: 628px) { /* line 10, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper { width: auto; top: 0; left: 0; right: 0; margin-top: 190px; }
+  /* line 166, /vagrant/sass/partials/_vme.scss */
+  .state-retrace #vme-wrapper { overflow: visible; } }
+@media (max-width: 628px) { /* line 179, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .swiper-desktop { display: none; } }
+/* line 184, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .swiper-mobile { display: none; }
+@media (max-width: 628px) { /* line 184, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .swiper-mobile { display: block; } }
+/* line 192, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-placeholder-text { position: absolute; z-index: 1; top: 0; right: 0; bottom: 0; left: 0; padding: 49px 0 0 40px; }
+@media (max-width: 628px) { /* line 192, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-text { padding: 20px 23px 0 23px; } }
+@media (max-width: 360px) { /* line 192, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-text { padding: 20px 0 0 10px; } }
+/* line 208, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-placeholder-title span { display: inline-block; background: #fefb0c; padding: 0 10px; font-size: 58px; height: 56px; line-height: 68px; font-family: 'Austin-Medium'; text-transform: uppercase; letter-spacing: -0.04em; }
+@media (max-width: 628px) { /* line 208, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-title span { font-size: 33px; height: 34px; line-height: 41px; } }
+@media (max-width: 360px) { /* line 208, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-title span { font-size: 25px; height: 27px; line-height: 31px; padding: 0 5px; } }
+/* line 229, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-placeholder-title span:not(:first-of-type) { margin-top: 3px; }
+/* line 234, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-placeholder-slogan { margin-top: 24px; }
+/* line 236, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-placeholder-slogan.mobile { display: none; }
+@media (max-width: 628px) { /* line 236, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-slogan.mobile { display: block; } }
+@media (max-width: 628px) { /* line 242, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-slogan.desktop { display: none; } }
+@media (max-width: 628px) { /* line 234, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-slogan { margin-top: 21px; padding-left: 6px; }
+  /* line 253, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-slogan .br-mobile { display: none; } }
+@media (max-width: 628px) and (max-width: 628px) { /* line 253, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-slogan .br-mobile { display: inline; } }
+@media (max-width: 628px) and (max-width: 628px) { /* line 259, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-slogan .br-desktop { display: none; } }
+@media (max-width: 360px) { /* line 234, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-slogan { margin-top: 15px; } }
+/* line 268, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-placeholder-slogan span { display: inline-block; background: #fff; padding: 0 10px; font-size: 30px; height: 36px; line-height: 40px; font-family: 'Austin-Medium'; }
+@media (max-width: 628px) { /* line 268, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-slogan span { font-size: 23px; height: auto; line-height: 30px; background: none; padding: 0; display: inline; } }
+@media (max-width: 360px) { /* line 268, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-slogan span { font-size: 16px; line-height: 21px; padding: 0 5px; display: inline; } }
+/* line 290, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-placeholder-slogan span:not(:first-of-type) { margin-top: 4px; }
+@media (max-width: 628px) { /* line 290, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-slogan span:not(:first-of-type) { margin: 0; } }
+/* line 298, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-placeholder-btn { display: inline-block; margin-top: 21px; border: 1px solid #fff; text-align: center; padding: 0 43px 0 20px; height: 40px; font-size: 13px; line-height: 40px; font-family: 'GothamHTF-Bold'; text-decoration: none; position: relative; letter-spacing: 2px; }
+@media (max-width: 628px) { /* line 298, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-btn { height: 50px; line-height: 50px; font-size: 13px; max-width: 275px; display: block; margin: 21px auto 0; } }
+@media (max-width: 360px) { /* line 298, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-btn { margin-top: 16px; padding: 0 28px 0 8px; height: 30px; font-size: 10px; line-height: 30px; max-width: 220px; } }
+/* line 327, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-placeholder-btn:after { content: '\2192'; margin-left: 4px; font-size: 18px; position: absolute; top: 0px; right: 16px; }
+@media (max-width: 360px) { /* line 327, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder-btn:after { font-size: 15px; right: 5px; } }
+/* line 343, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper.html5-vme .hidden-html5-vme { display: none !important; }
+/* line 349, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-placeholder { display: none; width: 100%; height: 100%; padding-top: 5px; }
+@media (max-width: 628px) { /* line 349, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper .vme-placeholder { padding-top: 0; } }
+/* line 359, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-placeholder img { margin-top: 5px; }
+/* line 362, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-placeholder p { display: none; margin-top: -60px; padding: 0 20px; font-size: 12px; font-weight: 100; text-align: center; }
+/* line 373, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-lenses-grid { display: none; position: absolute; width: 850px; height: 450px; left: -411px; top: 10px; padding: 5px; background: url("../images/bg/live-demo-vme-bg.png") top center repeat; background-size: 100%; margin: 5px 7px; }
+/* line 386, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-lenses-grid h3 { color: white; min-height: 31px; }
+/* line 391, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper .vme-lenses-grid img { width: auto; height: auto; max-width: 830px; max-height: 410px; margin-bottom: 5px; }
+/* line 401, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper #vme-container { display: inline-block; position: relative; width: 63%; height: 100%; vertical-align: top; max-height: 490px; border-right: 1px solid #000; }
+/* line 410, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper #vme-container:after { padding-top: 130%; display: block; content: ''; }
+@media (max-width: 628px) { /* line 401, /vagrant/sass/partials/_vme.scss */
+  #vme-wrapper #vme-container { width: 100%; box-shadow: none; border-right: 0; max-height: initial; } }
+/* line 422, /vagrant/sass/partials/_vme.scss */
+.route-home #vme-wrapper #vme-container { position: absolute; left: 9999px; display: none; }
+/* line 427, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper #vme-container #vme { width: 100%; height: 100%; position: absolute; }
+/* line 433, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper #vme-container .reset-btn { display: inline-block; }
+/* line 442, /vagrant/sass/partials/_vme.scss */
+body.state-retrace #vme-wrapper #vme-container .reset-btn { display: none; }
+
+/* line 449, /vagrant/sass/partials/_vme.scss */
+.vme-controls { position: absolute; bottom: 0; left: 0; right: 0; pointer-events: none; text-align: center; padding: 10px 0; z-index: 1; }
+/* line 458, /vagrant/sass/partials/_vme.scss */
+.vme-controls a { text-transform: uppercase; font-family: "Raleway-Medium"; display: inline-block; line-height: 20px; background: #fff; border: 1px solid #909090; position: relative; vertical-align: middle; pointer-events: all; outline: none; text-decoration: none; margin: 0 2px; font-size: 12px; padding: 0 6px; }
+@media (min-width: 481) and (max-width: 580px) { /* line 458, /vagrant/sass/partials/_vme.scss */
+  .vme-controls a { margin: 0 .4%; font-size: 10px; padding: 0 .5%; } }
+@media (max-width: 628px) { /* line 458, /vagrant/sass/partials/_vme.scss */
+  .vme-controls a { line-height: 26px; margin: 0 .6%; padding: 0 1.2%; font-size: 11px; } }
+@media (max-width: 360px) { /* line 458, /vagrant/sass/partials/_vme.scss */
+  .vme-controls a { line-height: 26px; margin: 0 .6%; padding: 0 1.2%; font-size: 9px; } }
+/* line 492, /vagrant/sass/partials/_vme.scss */
+.vme-controls .cancel { display: none; }
+/* line 496, /vagrant/sass/partials/_vme.scss */
+.vme-controls .retrace-inactive { opacity: 0.9; cursor: auto; pointer-events: none; background-color: #dcdcdc; font-weight: bold; }
+/* line 502, /vagrant/sass/partials/_vme.scss */
+.faceMappingAppContainer .vme-controls .retrace-inactive { display: inline-block; }
+/* line 507, /vagrant/sass/partials/_vme.scss */
+.vme-controls .zoom-out, .vme-controls .zoom-in, .vme-controls .zoom-out-inactive, .vme-controls .zoom-in-inactive { width: 24px; height: 22px; top: auto; -webkit-transform: none; transform: none; background-size: contain; background-position: center; background-repeat: no-repeat; }
+@media (max-width: 628px) { /* line 507, /vagrant/sass/partials/_vme.scss */
+  .vme-controls .zoom-out, .vme-controls .zoom-in, .vme-controls .zoom-out-inactive, .vme-controls .zoom-in-inactive { width: 28px; height: 28px; } }
+@media (max-width: 360px) { /* line 507, /vagrant/sass/partials/_vme.scss */
+  .vme-controls .zoom-out, .vme-controls .zoom-in, .vme-controls .zoom-out-inactive, .vme-controls .zoom-in-inactive { width: 26px; height: 28px; } }
+/* line 526, /vagrant/sass/partials/_vme.scss */
+.vme-controls .zoom-out, .vme-controls .zoom-out-inactive { background-image: url("assets/images/icon-minus.png"); margin-left: 0; border-left: 0; }
+/* line 530, /vagrant/sass/partials/_vme.scss */
+.vme-controls .zoom-out:before, .vme-controls .zoom-out-inactive:before { content: ''; position: absolute; left: 0; top: 2px; bottom: 2px; width: 1px; background-color: #909090; }
+/* line 541, /vagrant/sass/partials/_vme.scss */
+.vme-controls .zoom-in, .vme-controls .zoom-in-inactive { background-image: url("assets/images/icon-plus.png"); margin-right: 0; border-right: 0; }
+/* line 552, /vagrant/sass/partials/_vme.scss */
+.vme-controls .share, .vme-controls .share-inactive { width: 26px; height: 26px; border: 0; background-image: url("assets/images/icons/icon-share.png"); background-position: center; background-repeat: no-repeat; background-size: 108% 108%; border-radius: 50%; }
+@media (max-width: 628px) { /* line 552, /vagrant/sass/partials/_vme.scss */
+  .vme-controls .share, .vme-controls .share-inactive { width: 28px; height: 28px; } }
+@media (max-width: 360px) { /* line 552, /vagrant/sass/partials/_vme.scss */
+  .vme-controls .share, .vme-controls .share-inactive { width: 26px; height: 26px; } }
+/* line 570, /vagrant/sass/partials/_vme.scss */
+.state-share .vme-controls .share, .state-share .vme-controls .share-inactive { background-image: url("assets/images/icons/icon-share-active.png"); }
+
+/* line 577, /vagrant/sass/partials/_vme.scss */
+.vme-controls--top { top: 0; bottom: auto; }
+
+/* line 581, /vagrant/sass/partials/_vme.scss */
+.vme-controls--right { right: 10px; left: auto; }
+
+/* line 587, /vagrant/sass/partials/_vme.scss */
+body.route-retrace #vme-wrapper #vme-container .vme-controls .retrace-inactive { display: inline-block; }
+/* line 591, /vagrant/sass/partials/_vme.scss */
+body.route-retrace #vme-wrapper #vme-container .vme-controls .retrace { padding: 0 10px; }
+
+/* line 597, /vagrant/sass/partials/_vme.scss */
+body.subroute-webcam #vme-wrapper { z-index: -1; }
+
+/* from old html 5 page start */
+/* line 603, /vagrant/sass/partials/_vme.scss */
+#flashOnHtml5_vme { height: 100%; width: 100%; position: relative; }
+
+/* line 609, /vagrant/sass/partials/_vme.scss */
+.DisplayObjectContainer { position: relative; height: 1px; width: 1px; }
+/* line 613, /vagrant/sass/partials/_vme.scss */
+.DisplayObjectContainer > * { position: absolute; width: 100%; height: 100%; }
+
+/* line 620, /vagrant/sass/partials/_vme.scss */
+#debugConsole { position: absolute; border-color: gray; border-width: 2px; background-color: #CCC; font-size: small; overflow: auto; top: 5%; left: -10%; width: 40%; height: 80%; visibility: hidden; display: none; }
+/* line 633, /vagrant/sass/partials/_vme.scss */
+#debugConsole canvas { max-width: 100%; max-height: 150px; }
+
+/* line 640, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper.html5-vme #vme-container #vme { margin: 0px; }
+/* line 643, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper.html5-vme #vme-container .before-after-img { display: none; position: absolute; width: 100%; height: 100%; overflow: hidden; z-index: 0; top: 0px; left: 0px; }
+/* line 645, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper.html5-vme #vme-container .before-after-img.on { display: block; }
+/* line 655, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper.html5-vme #vme-container .before-after-img .before, #vme-wrapper.html5-vme #vme-container .before-after-img .after { display: block; height: 100%; background-size: 200%; background-repeat: no-repeat; background-color: #fff; overflow: hidden; }
+/* line 663, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper.html5-vme #vme-container .before-after-img .before { float: left; background-position: left center; position: absolute; right: 50%; }
+/* line 668, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper.html5-vme #vme-container .before-after-img .before img { width: auto; height: 100%; position: relative; right: -50%; }
+/* line 675, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper.html5-vme #vme-container .before-after-img .after { float: right; background-position: right center; position: absolute; left: 50%; }
+/* line 680, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper.html5-vme #vme-container .before-after-img .after:after { content: ''; display: block; position: absolute; width: 1px; left: 0; bottom: 0px; top: 0px; background-color: rgba(255, 255, 255, 0.8); }
+/* line 690, /vagrant/sass/partials/_vme.scss */
+#vme-wrapper.html5-vme #vme-container .before-after-img .after img { width: auto; height: 100%; position: relative; left: -50%; }
+
+/* line 701, /vagrant/sass/partials/_vme.scss */
+#StageMain_capturedBitmap { height: auto; position: relative; }
+
+/* line 708, /vagrant/sass/partials/_vme.scss */
+body.state-retrace #vme-container .vme-controls a { display: none; }
+/* line 712, /vagrant/sass/partials/_vme.scss */
+body.state-retrace #vme-container .vme-controls .cancel { display: inline-block; }
+/* line 718, /vagrant/sass/partials/_vme.scss */
+body.state-retrace #vme-wrapper .faceMappingAppContainer .vme-controls .cancel { display: inline-block; }
+@media (max-width: 628px) { /* line 723, /vagrant/sass/partials/_vme.scss */
+  body.state-retrace #vme-wrapper .faceMappingAppContainer { overflow: hidden; } }
+
+/* line 730, /vagrant/sass/partials/_vme.scss */
+.main-overlay { display: table; display: none; background: rgba(0, 0, 0, 0.72); position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 100; width: 100%; height: 100%; text-align: center; }
+/* line 744, /vagrant/sass/partials/_vme.scss */
+.main-overlay .overlay-content { display: table-cell; vertical-align: middle; }
+/* line 747, /vagrant/sass/partials/_vme.scss */
+.main-overlay .overlay-content span { margin-top: 20px; display: block; color: #fff; font-size: 18px; font-family: 'GothamHTF-Book'; text-transform: uppercase; }
+/* line 755, /vagrant/sass/partials/_vme.scss */
+.main-overlay .overlay-content img { width: 70px; }
+
+/*----------------------------------------*\ TRACING VIEW We have several tracing views: adjust lenses and adjust makeup
+\*----------------------------------------*/
+/* line 6, /vagrant/sass/partials/_tracing.scss */
+#retrace { position: absolute; top: 0; right: 2px; bottom: 0; width: 36.7%; padding: 0 5px; display: none; background-color: #fff; color: #000; z-index: 5; }
+@media (max-width: 628px) { /* line 6, /vagrant/sass/partials/_tracing.scss */
+  #retrace { bottom: auto; -webkit-transform: translateY(-100%); transform: translateY(-100%); width: 100%; height: 190px; overflow: hidden; border-bottom: 1px solid #000; padding: 0 4px; white-space: nowrap; }
+  /* line 27, /vagrant/sass/partials/_tracing.scss */
+  #retrace > * { white-space: normal; } }
+/* line 33, /vagrant/sass/partials/_tracing.scss */
+#retrace .btn span { max-width: 200px; white-space: normal; }
+/* line 43, /vagrant/sass/partials/_tracing.scss */
+#retrace#retrace-view .retrace-block .ready-to-customize-btn { float: right; margin-right: 30px; }
+/* line 48, /vagrant/sass/partials/_tracing.scss */
+#retrace#retrace-view .retrace-block label { display: none; max-width: 140px; margin: 0; font-size: 10px; color: #022712; cursor: pointer; }
+/* line 57, /vagrant/sass/partials/_tracing.scss */
+#retrace#retrace-view .retrace-block li.on label { position: relative; display: inline-block; vertical-align: middle; }
+/* line 63, /vagrant/sass/partials/_tracing.scss */
+#retrace#retrace-view .retrace-block input.teeth-are-showing { position: absolute; top: -1px; right: 100%; margin: 0 3px 0 0; cursor: pointer; }
+/* line 77, /vagrant/sass/partials/_tracing.scss */
+#retrace .retrace-block__controls.move .glyphicon-arrow-up:before, #retrace .retrace-block__controls.move .glyphicon-arrow-down:before, #retrace .retrace-block__controls.move .glyphicon-arrow-left:before, #retrace .retrace-block__controls.move .glyphicon-arrow-right:before { position: absolute; top: -1px; left: 33%; }
+
+/* line 88, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__group { display: block; text-align: center; }
+
+/* line 92, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__header { text-transform: uppercase; font-weight: bold; margin: 0; font-family: "Raleway-Bold"; font-size: 12px; }
+
+/* line 99, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__styles-list { margin-top: 12px; margin-bottom: 12px; padding-left: 6px; }
+@media (max-width: 628px) { /* line 99, /vagrant/sass/partials/_tracing.scss */
+  .retrace-block__styles-list { text-align: center; } }
+
+/* line 110, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__style { border-bottom: 1px solid #000; padding-top: 6px; display: block; width: calc(100% - 4px); margin-right: 4px; }
+@media (max-width: 628px) { /* line 110, /vagrant/sass/partials/_tracing.scss */
+  .retrace-block__style { width: 38%; margin: 0; display: inline-block; vertical-align: top; float: right; min-width: 114px; } }
+/* line 124, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__style .retrace-block__header { padding-left: 2px; }
+
+/* line 128, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__style-example { display: inline-block; width: 48px; height: 34px; background-position: center; background-repeat: no-repeat; background-size: contain; outline: 1px solid #595959; margin-right: 4px; }
+/* line 137, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__style-example.active { outline: 2px solid #f00; }
+
+/* line 141, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__style-1 { background-image: url("assets/images/retrace_style_1.png"); }
+
+/* line 144, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__style-2 { background-image: url("assets/images/retrace_style_2.png"); }
+
+/* line 147, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__retrace { padding-top: 12px; }
+@media (max-width: 628px) { /* line 147, /vagrant/sass/partials/_tracing.scss */
+  .retrace-block__retrace { width: calc(62% - 2px); display: inline-block; vertical-align: top; padding-top: 6px; }
+  /* line 154, /vagrant/sass/partials/_tracing.scss */
+  .route-select-hairstyles .retrace-block__retrace, .route-select-eyewear .retrace-block__retrace, .route-select-headwear .retrace-block__retrace, .route-select-jewelry .retrace-block__retrace { width: 100%; } }
+
+/* line 165, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__description { margin-top: 4px; display: block; font-family: "Raleway-Regular"; font-size: 12px; line-height: 14px; margin-bottom: 12px; }
+@media (max-width: 628px) { /* line 165, /vagrant/sass/partials/_tracing.scss */
+  .retrace-block__description { margin-bottom: 6px; min-height: 56px; }
+  /* line 175, /vagrant/sass/partials/_tracing.scss */
+  .route-select-hairstyles .retrace-block__description, .route-select-eyewear .retrace-block__description, .route-select-headwear .retrace-block__description, .route-select-jewelry .retrace-block__description { min-height: 0; height: 28px; } }
+
+/* line 187, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__controls { line-height: 20px; padding: 0 5px; margin-bottom: 14px; display: block; }
+@media (max-width: 628px) { /* line 187, /vagrant/sass/partials/_tracing.scss */
+  .retrace-block__controls { text-align: center; padding: 0 3px; }
+  /* line 195, /vagrant/sass/partials/_tracing.scss */
+  .retrace-block__controls.hidden-on-mobile { display: none; }
+  /* line 198, /vagrant/sass/partials/_tracing.scss */
+  .route-select-hairstyles .retrace-block__controls, .route-select-eyewear .retrace-block__controls, .route-select-headwear .retrace-block__controls, .route-select-jewelry .retrace-block__controls { display: inline-block; } }
+/* line 205, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__controls.small-bottom-margin { margin-bottom: 10px; }
+/* line 211, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__controls.no-margin { margin: 0; }
+/* line 214, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__controls.text-center { text-align: center; }
+/* line 217, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__controls.move, .retrace-block__controls.size, .retrace-block__controls.rotate, .retrace-block__controls.length, .retrace-block__controls.width { display: none; }
+/* line 219, /vagrant/sass/partials/_tracing.scss */
+.route-select-hairstyles .retrace-block__controls.move, .route-select-eyewear .retrace-block__controls.move, .route-select-headwear .retrace-block__controls.move, .route-select-jewelry .retrace-block__controls.move, .route-select-hairstyles .retrace-block__controls.size, .route-select-eyewear .retrace-block__controls.size, .route-select-headwear .retrace-block__controls.size, .route-select-jewelry .retrace-block__controls.size, .route-select-hairstyles .retrace-block__controls.rotate, .route-select-eyewear .retrace-block__controls.rotate, .route-select-headwear .retrace-block__controls.rotate, .route-select-jewelry .retrace-block__controls.rotate, .route-select-hairstyles .retrace-block__controls.length, .route-select-eyewear .retrace-block__controls.length, .route-select-headwear .retrace-block__controls.length, .route-select-jewelry .retrace-block__controls.length, .route-select-hairstyles .retrace-block__controls.width, .route-select-eyewear .retrace-block__controls.width, .route-select-headwear .retrace-block__controls.width, .route-select-jewelry .retrace-block__controls.width { display: inline-block; }
+/* line 223, /vagrant/sass/partials/_tracing.scss */
+#vme-container .retrace-block__controls { width: 60px; padding: 0; margin-bottom: 10px; }
+
+@media (max-width: 628px) { /* line 229, /vagrant/sass/partials/_tracing.scss */
+  .retrace-block__controls--mobile-position { position: absolute; left: 0; right: 0; bottom: 6px; text-align: center; } }
+
+/* line 241, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__controls-caption { display: inline-block; vertical-align: top; width: 60px; font-weight: bold; margin-right: 2px; color: #000; text-shadow: 0px 0px 4px #fff; text-align: left; width: 80px; font-size: 11px; }
+@media (max-width: 628px) { /* line 241, /vagrant/sass/partials/_tracing.scss */
+  .retrace-block__controls-caption { padding-left: 0; text-align: left; width: 74px; } }
+/* line 258, /vagrant/sass/partials/_tracing.scss */
+#vme-container .retrace-block__controls-caption { display: inline-block; position: relative; width: auto; margin: 0; }
+
+/* line 265, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__controls-buttons { border: 1px solid #000; display: inline-block; vertical-align: top; line-height: normal; position: relative; }
+/* line 271, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__controls-buttons:before { content: ""; position: absolute; width: 0; left: 50%; top: 1px; bottom: 1px; border-left: 1px solid #000; }
+/* line 280, /vagrant/sass/partials/_tracing.scss */
+#vme-container .retrace-block__controls-buttons { border: 0; width: 100%; }
+/* line 283, /vagrant/sass/partials/_tracing.scss */
+#vme-container .retrace-block__controls-buttons:before { content: none; }
+
+/* line 288, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__button { display: inline-block; width: 32px; height: 20px; line-height: 20px; vertical-align: top; background-position: center; background-size: contain; background-repeat: no-repeat; cursor: pointer; float: left; }
+/* line 300, /vagrant/sass/partials/_tracing.scss */
+#vme-container .retrace-block__button { display: block; background-color: #fff; margin: 0 auto 4px auto; border: 1px solid #000; }
+
+/* line 307, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__button--minus { background-image: url("assets/images/icon-minus.png"); }
+
+/* line 310, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__button--plus { background-image: url("assets/images/icon-plus.png"); }
+
+/* line 313, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__button--rotate-left { background-image: url("assets/images/icon-rotate-left.png"); }
+
+/* line 316, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__button--rotate-right { background-image: url("assets/images/icon-rotate-right.png"); }
+
+/* line 319, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__button--reset, .retrace-block__button--done, .retrace-block__button--next, .retrace-block__button--adjust-done { border: 1px solid #000; width: auto; height: auto; line-height: 20px; padding: 2px 10px; text-align: center; font-size: 14px; font-family: "Raleway-Bold"; float: none; }
+
+/* line 331, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__button--reset { margin-right: 2px; display: none; }
+
+/* line 335, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__retrace-example { background-position: center; background-repeat: no-repeat; background-size: contain; width: calc(100% - 4px); margin-top: 15px; height: 156px; }
+/* line 343, /vagrant/sass/partials/_tracing.scss */
+.route-select-hairstyles .retrace-block__retrace-example, .route-select-eyewear .retrace-block__retrace-example, .route-select-headwear .retrace-block__retrace-example, .route-select-jewelry .retrace-block__retrace-example { display: none; }
+/* line 346, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__retrace-example.foundation, .retrace-block__retrace-example.facepowder { background-image: url("assets/images/trace-face-example.png"); }
+/* line 349, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__retrace-example.concealer { background-image: url("assets/images/trace-face-concealer.jpg"); }
+/* line 352, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__retrace-example.blush { background-image: url("assets/images/trace-face-cheek-color.jpg"); }
+/* line 355, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__retrace-example.eyeshadow { background-image: url("assets/images/trace-eyes-eye-color.jpg"); }
+/* line 358, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__retrace-example.eyeliner, .retrace-block__retrace-example.mascara { background-image: url("assets/images/trace-eyes-eyeliner.jpg"); }
+/* line 361, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__retrace-example.eyebrow { background-image: url("assets/images/trace-eyes-eyebrows.jpg"); }
+/* line 364, /vagrant/sass/partials/_tracing.scss */
+.retrace-block__retrace-example.lipstick, .retrace-block__retrace-example.lipgloss, .retrace-block__retrace-example.lipliner { background-image: url("assets/images/trace-lips-lip-liner.jpg"); }
+@media (max-width: 628px) { /* line 335, /vagrant/sass/partials/_tracing.scss */
+  .retrace-block__retrace-example { display: inline-block; vertical-align: top; width: 38%; margin: 0; position: absolute; top: 0; right: 4px; height: calc(100% - 30px); } }
+
+/* line 395, /vagrant/sass/partials/_tracing.scss */
+.html5-vme-app .tracing-view .outlines > li.on span.resize { display: none; }
+/* line 398, /vagrant/sass/partials/_tracing.scss */
+.html5-vme-app .tracing-view .outlines > li.on[data-target=lens] span { display: block; }
+
+/* line 406, /vagrant/sass/partials/_tracing.scss */
+.faceMappingAppContainer { position: relative; display: none; width: 63%; height: 100%; vertical-align: top; z-index: 2; max-height: 486px; border-right: 1px solid #000; }
+@media (max-width: 628px) { /* line 406, /vagrant/sass/partials/_tracing.scss */
+  .faceMappingAppContainer { width: 100%; border-right: 0; max-height: initial; } }
+/* line 422, /vagrant/sass/partials/_tracing.scss */
+.faceMappingAppContainer:after { padding-top: 130%; display: block; content: ""; }
+/* line 428, /vagrant/sass/partials/_tracing.scss */
+.faceMappingAppContainer .mask { position: absolute; width: 100%; height: 100%; overflow: hidden; }
+/* line 435, /vagrant/sass/partials/_tracing.scss */
+.faceMappingAppContainer .imageTrace { position: relative; background-repeat: no-repeat; background-position: inherit; }
+/* line 441, /vagrant/sass/partials/_tracing.scss */
+.faceMappingAppContainer .pointtracing { position: absolute; cursor: pointer; }
+/* line 446, /vagrant/sass/partials/_tracing.scss */
+.faceMappingAppContainer .marker { position: relative; width: 8px; height: 8px; background: url("assets/images/dot.png"); background-size: contain; zoom: 1; }
+@media (max-width: 628px) { /* line 446, /vagrant/sass/partials/_tracing.scss */
+  .faceMappingAppContainer .marker { width: 12px; height: 12px; } }
+
+/* line 464, /vagrant/sass/partials/_tracing.scss */
+body:not(.no-hover) .tracing-view li:hover { background: url("../images/color-studio-sprite.png") -434px -76px; }
+/* line 467, /vagrant/sass/partials/_tracing.scss */
+body:not(.no-hover) .tracing-view li .minus:hover, body:not(.no-hover) .tracing-view li .plus:hover { opacity: 0.7; }
+/* line 472, /vagrant/sass/partials/_tracing.scss */
+body:not(.no-hover) .tracing-view#retrace-view .retrace-block label:hover { text-decoration: underline; }
+
+/* line 478, /vagrant/sass/partials/_tracing.scss */
+body.state-retrace #retrace { display: block; }
+
+/*----------------------------------------*\ UPLOAD PHOTO VIEW
+\*----------------------------------------*/
+/* line 5, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper { display: none; position: relative; margin-top: 208px; width: 100%; top: 0; left: 0; background-color: #fff; min-height: 280px; height: 486px; }
+@media (max-width: 628px) { /* line 5, /vagrant/sass/partials/_upload-photo.scss */
+  #upload-photo-wrapper { margin-top: 200px; } }
+/* line 25, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container { height: 100%; letter-spacing: -0.34em; }
+/* line 29, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container > * { letter-spacing: normal; }
+/* line 32, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container #upload-photo { text-align: center; height: 100%; display: inline-block; vertical-align: top; padding: 5px; width: 63%; margin: 0; }
+@media (max-width: 628px) { /* line 32, /vagrant/sass/partials/_upload-photo.scss */
+  #upload-photo-wrapper #upload-photo-container #upload-photo { width: 100%; } }
+/* line 44, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container #upload-photo #photo-wrapper { position: relative; height: 100%; }
+/* line 49, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container #upload-photo #photo-wrapper img { max-height: 415px; max-width: 356px; }
+/* line 54, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container #upload-photo #photo-wrapper .jcrop-holder { margin: auto; }
+/* line 57, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container #upload-photo #photo-wrapper .jcrop-keymgr { visibility: hidden; }
+/* line 63, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls { position: absolute; top: 0; right: 0; bottom: 0; width: 36.7%; display: inline-block; padding: 6px 0 6px 4px; border-left: 1px solid black; background-color: #fff; }
+@media (max-width: 628px) { /* line 63, /vagrant/sass/partials/_upload-photo.scss */
+  #upload-photo-wrapper #upload-photo-container .upload-controls { height: 200px; width: 100%; -webkit-transform: translateY(-100%); transform: translateY(-100%); background: #fff; border-left: 0; border-bottom: 1px solid #000; } }
+/* line 92, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls .caption { font-family: "Raleway-Bold"; font-weight: bold; color: #000; font-size: 12px; margin-bottom: 6px; }
+@media (max-width: 628px) { /* line 92, /vagrant/sass/partials/_upload-photo.scss */
+  #upload-photo-wrapper #upload-photo-container .upload-controls .caption { font-size: 18px; padding-left: 12px; margin-bottom: 0; } }
+/* line 103, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls .caption.crop { text-transform: uppercase; }
+/* line 106, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls .caption.caption-rotate { margin: 0 22px 0 0; line-height: 22px; }
+@media (max-width: 628px) { /* line 106, /vagrant/sass/partials/_upload-photo.scss */
+  #upload-photo-wrapper #upload-photo-container .upload-controls .caption.caption-rotate { font-size: 20px; line-height: 40px; margin-right: 32px; } }
+/* line 116, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls .description { font-family: "Raleway-Medium"; font-size: 12px; line-height: 1.2em; }
+@media (max-width: 628px) { /* line 116, /vagrant/sass/partials/_upload-photo.scss */
+  #upload-photo-wrapper #upload-photo-container .upload-controls .description { font-size: 15px; padding-left: 12px; } }
+/* line 126, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls .submit-upload { display: inline-block; width: 100%; margin-top: 40px; text-align: center; }
+@media (max-width: 628px) { /* line 126, /vagrant/sass/partials/_upload-photo.scss */
+  #upload-photo-wrapper #upload-photo-container .upload-controls .submit-upload { margin-top: 26px; text-align: center; padding-left: 0; position: absolute; bottom: 15px; left: calc(50% + 4px); -webkit-transform: translateX(-50%); transform: translateX(-50%); width: auto; white-space: nowrap; } }
+/* line 145, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls .submit-upload .skip { border: 1px solid black; margin-right: 8px; }
+/* line 150, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls .submit-upload .crop { border: 1px solid black; }
+/* line 153, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls .submit-upload .skip, #upload-photo-wrapper #upload-photo-container .upload-controls .submit-upload .crop { display: inline-block; font-weight: bold; text-decoration: none; color: black; width: 70px; text-transform: none; text-align: center; line-height: 20px; }
+@media (max-width: 628px) { /* line 153, /vagrant/sass/partials/_upload-photo.scss */
+  #upload-photo-wrapper #upload-photo-container .upload-controls .submit-upload .skip, #upload-photo-wrapper #upload-photo-container .upload-controls .submit-upload .crop { line-height: 32px; width: 120px; font-size: 20px; } }
+/* line 170, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls .rotate-wrapper { margin-top: 22px; padding: 0; white-space: nowrap; text-align: center; }
+@media (max-width: 628px) { /* line 170, /vagrant/sass/partials/_upload-photo.scss */
+  #upload-photo-wrapper #upload-photo-container .upload-controls .rotate-wrapper { padding: 0; margin-top: 23px; text-align: center; } }
+/* line 181, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls .rotate-wrapper .caption { display: inline-block; vertical-align: top; }
+/* line 188, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls .rotate-wrapper .rotate { display: inline-block; width: 34px; height: 20px; background-position: center; background-size: contain; background-repeat: no-repeat; vertical-align: top; }
+@media (max-width: 628px) { /* line 188, /vagrant/sass/partials/_upload-photo.scss */
+  #upload-photo-wrapper #upload-photo-container .upload-controls .rotate-wrapper .rotate { width: 55px; height: 35px; } }
+/* line 200, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls .rotate-wrapper .rotate.rotate-left { background-image: url("assets/images/icon-rotate-left.png"); border-right: 1px solid #000; }
+/* line 204, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls .rotate-wrapper .rotate.rotate-right { background-image: url("assets/images/icon-rotate-right.png"); }
+/* line 210, /vagrant/sass/partials/_upload-photo.scss */
+#upload-photo-wrapper #upload-photo-container .upload-controls .rotate-controls { display: inline-block; vertical-align: top; border: 1px solid #000; }
+
+/* line 220, /vagrant/sass/partials/_upload-photo.scss */
+body.subroute-upload #upload-photo-wrapper, body.subroute-facebook #upload-photo-wrapper { display: block; z-index: 110; }
+
+/*----------------------------------------*\ COMMON MODAL
+\*----------------------------------------*/
+/* line 5, /vagrant/sass/partials/_common-modal.scss */
+#common-modal { display: none; position: absolute; top: 50%; left: 50%; width: calc(100% - 20px); -webkit-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0); z-index: 601; box-shadow: 0 2px 7px #888888; border: 1px solid #000; background: #ffffff; font-family: "Raleway-Bold"; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+/* line 23, /vagrant/sass/partials/_common-modal.scss */
+#common-modal.on { display: block; }
+/* line 28, /vagrant/sass/partials/_common-modal.scss */
+#common-modal div[class$="wrapper"] { margin-bottom: 40px; }
+/* line 32, /vagrant/sass/partials/_common-modal.scss */
+#common-modal .view-controls { position: absolute; right: 20px; bottom: 10px; }
+/* line 36, /vagrant/sass/partials/_common-modal.scss */
+#common-modal .view-controls .btn { margin: 0 0 0 10px; background: 0; box-shadow: none; border-radius: 0; border: 1px solid #000; outline: 0; padding: 0; width: 70px; line-height: 20px; }
+
+/* line 50, /vagrant/sass/partials/_common-modal.scss */
+#common-modal-header { position: relative; height: 25px; line-height: 25px; margin-bottom: 10px; padding: 0 36px 0 15px; color: #000; border-bottom: 1px solid #000; font-size: 12px; text-transform: uppercase; white-space: nowrap; background: #f0f0f0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+@media (max-width: 628px) { /* line 50, /vagrant/sass/partials/_common-modal.scss */
+  #common-modal-header { font-size: 10px; } }
+
+/* line 70, /vagrant/sass/partials/_common-modal.scss */
+#common-modal-body { padding: 0 20px; }
+
+/*----------------------------------------*\ ACCOUNTING BLOCK
+\*----------------------------------------*/
+/* line 5, /vagrant/sass/partials/_accounting.scss */
+.accounting { display: none; position: absolute; z-index: 6; bottom: 16px; left: 135px; width: 350px; font-size: 15px; text-align: center; color: black; }
+/* line 15, /vagrant/sass/partials/_accounting.scss */
+.accounting p { line-height: 20px; }
+/* line 17, /vagrant/sass/partials/_accounting.scss */
+.accounting .logout { display: none; height: 15px; }
+/* line 22, /vagrant/sass/partials/_accounting.scss */
+.accounting .register-link { float: left; }
+/* line 23, /vagrant/sass/partials/_accounting.scss */
+.accounting .login-link { float: right; }
+/* line 24, /vagrant/sass/partials/_accounting.scss */
+.accounting a { color: #916e3a; }
+
+/* line 30, /vagrant/sass/partials/_accounting.scss */
+body.authentificated .logout { display: block; }
+/* line 31, /vagrant/sass/partials/_accounting.scss */
+body.authentificated .register-login { display: none; }
+
+/* line 36, /vagrant/sass/partials/_accounting.scss */
+body.route-home .accounting { display: block; }
+
+/* line 1, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper { display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 2; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; background-color: #fff; }
+/* line 15, /vagrant/sass/partials/_select-product.scss */
+body.subroute-select-product #select-product-wrapper { display: block; }
+/* line 19, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .title-wrapper { line-height: 1.2em; max-height: calc(1.2em * 2); overflow: hidden; white-space: normal; display: block; font-size: 12px; padding-right: 10px; margin-top: 20px; }
+@media (max-width: 628px) { /* line 19, /vagrant/sass/partials/_select-product.scss */
+  #select-product-wrapper .title-wrapper { margin-top: 15px; padding-left: 0; padding-right: 0; font-size: 10px; max-height: calc(1.2em * 2); } }
+/* line 42, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .title-wrapper .title { word-break: break-all; position: relative; display: block; max-height: calc(1.2em * 3); line-height: 1.2em; }
+@media (max-width: 628px) { /* line 42, /vagrant/sass/partials/_select-product.scss */
+  #select-product-wrapper .title-wrapper .title { max-height: calc(1.2em * 3); } }
+/* line 51, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .title-wrapper .title:after { content: "..."; position: absolute; right: 0; top: calc(1.2em * 4 - 100% - 2px); text-align: left; background-color: white; background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 10px); padding-left: 10px; line-height: calc(1.2em + 2px); }
+@media (max-width: 628px) { /* line 51, /vagrant/sass/partials/_select-product.scss */
+  #select-product-wrapper .title-wrapper .title:after { top: calc(1.2em * 4 - 100% - 2px); } }
+/* line 69, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line:not(img) { width: 100%; min-height: 100px; padding-left: 40px; margin-top: 5px; }
+@media (max-width: 628px) { /* line 69, /vagrant/sass/partials/_select-product.scss */
+  #select-product-wrapper .product-line:not(img) { padding-left: 75px; } }
+/* line 84, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .title { display: inline-block; vertical-align: top; text-transform: none; font-weight: bold; font-size: inherit; }
+/* line 93, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line img { max-width: 100px; float: left; height: 100px; }
+@media (max-width: 628px) { /* line 93, /vagrant/sass/partials/_select-product.scss */
+  #select-product-wrapper .product-line img { max-width: 60px; height: 60px; position: absolute; left: 10px; margin-right: 10px; } }
+/* line 107, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .title, #select-product-wrapper .product-line .price, #select-product-wrapper .product-line .shade, #select-product-wrapper .product-line .brand, #select-product-wrapper .product-line .product-title { color: #000; }
+/* line 110, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .price, #select-product-wrapper .product-line .shade, #select-product-wrapper .product-line .brand, #select-product-wrapper .product-line .product-title { display: inline-block; font-size: 14px; width: calc(100% - 100px); }
+@media (max-width: 628px) { /* line 110, /vagrant/sass/partials/_select-product.scss */
+  #select-product-wrapper .product-line .price, #select-product-wrapper .product-line .shade, #select-product-wrapper .product-line .brand, #select-product-wrapper .product-line .product-title { font-size: 12px; } }
+/* line 118, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .price-label, #select-product-wrapper .product-line .shade-label, #select-product-wrapper .product-line .title-label, #select-product-wrapper .product-line .brand-label { font-family: "Raleway-Bold"; font-weight: bold; }
+/* line 122, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .price-value, #select-product-wrapper .product-line .shade-value, #select-product-wrapper .product-line .title-value, #select-product-wrapper .product-line .brand-value { font-family: "Raleway-Medium"; font-weight: normal; margin-left: 4px; }
+/* line 128, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .wrapper { display: inline-block; padding-left: 0px; }
+/* line 132, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .wrapper .price, #select-product-wrapper .product-line .wrapper .shade, #select-product-wrapper .product-line .wrapper .brand, #select-product-wrapper .product-line .wrapper .product-title { width: auto; display: block; }
+/* line 138, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .styles { display: none; padding: 0 10px; padding-left: 0; margin-top: 4px; height: 70px; overflow: hidden; position: relative; }
+@media (max-width: 628px) { /* line 138, /vagrant/sass/partials/_select-product.scss */
+  #select-product-wrapper .product-line .styles { height: 63px; } }
+/* line 151, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .styles a { display: none; }
+/* line 154, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .styles a:hover { color: #595959; }
+/* line 158, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .styles a.active { border: 1px solid #f00; }
+/* line 161, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .styles a.active .areas { position: absolute; left: 0; top: 35px; }
+@media (max-width: 628px) { /* line 161, /vagrant/sass/partials/_select-product.scss */
+  #select-product-wrapper .product-line .styles a.active .areas { top: 30px; } }
+/* line 170, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .styles a.active .areas .area { display: inline-block; }
+/* line 177, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .styles span { width: 54px; height: 32px; display: block; border: 1px solid #dddddd; background-repeat: no-repeat; background-position: center; background-size: contain; }
+@media (max-width: 628px) { /* line 177, /vagrant/sass/partials/_select-product.scss */
+  #select-product-wrapper .product-line .styles span { width: 52px; height: 28px; } }
+/* line 192, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .areas { margin-top: 4px; }
+/* line 194, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .product-line .areas .area { display: none; line-height: 24px; width: 48px; text-align: center; margin-right: 2px; border: 1px solid #ddd; background: #fff; cursor: pointer; vertical-align: top; }
+/* line 208, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .back-to-product-lines { position: absolute; bottom: 6px; display: inline-block; font-weight: bold; text-decoration: none; text-transform: uppercase; color: #000; margin-top: 14px; padding-left: 4px; }
+@media (max-width: 628px) { /* line 208, /vagrant/sass/partials/_select-product.scss */
+  #select-product-wrapper .back-to-product-lines { margin-top: 8px; } }
+/* line 223, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .products-list { overflow: hidden; padding: 0 12px; margin-top: 6px; }
+@media (max-width: 628px) { /* line 223, /vagrant/sass/partials/_select-product.scss */
+  #select-product-wrapper .products-list { margin-top: 2px; } }
+/* line 230, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .products-list .products { overflow: hidden; margin: 0 50px; position: static; }
+@media (max-width: 628px) { /* line 230, /vagrant/sass/partials/_select-product.scss */
+  #select-product-wrapper .products-list .products { margin: 0 23px; } }
+/* line 238, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .products-list .products .swiper-button-prev, #select-product-wrapper .products-list .products .swiper-button-next { position: absolute; top: calc(50% + 4px); width: 22px; height: 22px; cursor: pointer; z-index: 1; background-position: center; background-size: cover; background-repeat: no-repeat; font-size: 0; }
+/* line 251, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .products-list .products .swiper-button-prev { left: 4px; background-image: url("assets/images/Arrow-left.png"); }
+/* line 256, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .products-list .products .swiper-button-next { right: 0; background-image: url("assets/images/Arrow-right.png"); }
+/* line 263, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .swiper-slide { display: inline-block; text-align: center; cursor: pointer; vertical-align: top; width: calc(100%/8 - 1px); max-width: 48px; }
+@media (max-width: 628px) { /* line 263, /vagrant/sass/partials/_select-product.scss */
+  #select-product-wrapper .swiper-slide { width: 36px; } }
+/* line 274, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .swiper-slide.active .product-preview { border: 2px solid #f00; }
+/* line 278, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .swiper-slide:after { padding-top: 100%; display: block; content: ''; }
+/* line 284, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .swiper-slide .product-preview { position: absolute; top: 0; bottom: 0; right: 0; left: 0; width: 100%; height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; }
+/* line 301, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.blush .styles.blush { display: block; }
+/* line 304, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.blush .styles a:nth-child(-n+4) { display: inline-block; }
+/* line 309, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.blush .styles a:nth-child(1).active .areas .area:nth-of-type(-n+1) { display: none; }
+/* line 313, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.blush .styles a:nth-child(1) span { background-image: url("assets/images/7-0.png"); }
+/* line 319, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.blush .styles a:nth-child(2).active .areas .area:nth-of-type(-n+1) { display: none; }
+/* line 323, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.blush .styles a:nth-child(2) span { background-image: url("assets/images/7-1.png"); }
+/* line 329, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.blush .styles a:nth-child(3).active .areas .area:nth-of-type(-n+1) { display: none; }
+/* line 333, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.blush .styles a:nth-child(3) span { background-image: url("assets/images/7-2.png"); }
+/* line 339, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.blush .styles a:nth-child(4).active ~ .areas .area:nth-of-type(-n+2) { display: inline-block; }
+/* line 343, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.blush .styles a:nth-child(4) span { background-image: url("assets/images/7-3.png"); }
+/* line 352, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeshadow .styles.eyeshadow { display: block; }
+/* line 355, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeshadow .styles a:nth-child(-n+4) { display: inline-block; }
+/* line 360, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeshadow .styles a:nth-child(1).active .areas .area:nth-of-type(-n+1) { display: none; }
+/* line 364, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeshadow .styles a:nth-child(1) span { background-image: url("assets/images/4-0.png"); }
+/* line 370, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeshadow .styles a:nth-child(2).active ~ .areas .area:nth-of-type(-n+3) { display: inline-block; }
+/* line 374, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeshadow .styles a:nth-child(2) span { background-image: url("assets/images/4-1.png"); }
+/* line 380, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeshadow .styles a:nth-child(3).active ~ .areas .area:nth-of-type(-n+2) { display: inline-block; }
+/* line 384, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeshadow .styles a:nth-child(3) span { background-image: url("assets/images/4-2.png"); }
+/* line 390, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeshadow .styles a:nth-child(4).active ~ .areas .area:nth-of-type(-n+1) { display: inline-block; }
+/* line 394, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeshadow .styles a:nth-child(4) span { background-image: url("assets/images/4-3.png"); }
+/* line 403, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeliner .styles.eyeliner { display: block; }
+/* line 407, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeliner .styles a:nth-child(-n+4) { display: inline-block; }
+/* line 412, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeliner .styles a:nth-child(1).active .areas .area:nth-of-type(-n+1) { display: none; }
+/* line 416, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeliner .styles a:nth-child(1) span { background-image: url("assets/images/5-0.png"); }
+/* line 422, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeliner .styles a:nth-child(2).active .areas .area:nth-of-type(-n+1) { display: none; }
+/* line 426, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeliner .styles a:nth-child(2) span { background-image: url("assets/images/5-1.png"); }
+/* line 432, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeliner .styles a:nth-child(3).active .areas .area:nth-of-type(-n+1) { display: none; }
+/* line 436, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeliner .styles a:nth-child(3) span { background-image: url("assets/images/5-2.png"); }
+/* line 442, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeliner .styles a:nth-child(4).active .areas .area:nth-of-type(-n+1) { display: none; }
+/* line 446, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.eyeliner .styles a:nth-child(4) span { background-image: url("assets/images/5-3.png"); }
+/* line 455, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.mascara .styles.mascara { display: block; }
+/* line 458, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.mascara .styles a:nth-child(-n+2) { display: inline-block; }
+/* line 463, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.mascara .styles a:nth-child(1).active .areas .area:nth-of-type(-n+1) { display: none; }
+/* line 467, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.mascara .styles a:nth-child(1) span { background-image: url("assets/images/6-0.png"); }
+/* line 473, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.mascara .styles a:nth-child(2).active .areas .area:nth-of-type(-n+1) { display: none; }
+/* line 477, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.mascara .styles a:nth-child(2) span { background-image: url("assets/images/6-1.png"); }
+/* line 485, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.lipliner .styles.lipliner { display: block; }
+/* line 489, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.lipliner .styles a:nth-child(-n+3) { display: inline-block; }
+/* line 494, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.lipliner .styles a:nth-child(1).active .areas .area:nth-of-type(-n+1) { display: none; }
+/* line 498, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.lipliner .styles a:nth-child(1) span { background-image: url("assets/images/3-0.png"); }
+/* line 504, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.lipliner .styles a:nth-child(2).active .areas .area:nth-of-type(-n+1) { display: none; }
+/* line 508, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.lipliner .styles a:nth-child(2) span { background-image: url("assets/images/3-1.png"); }
+/* line 514, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.lipliner .styles a:nth-child(3).active .areas .area:nth-of-type(-n+1) { display: none; }
+/* line 518, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper.lipliner .styles a:nth-child(3) span { background-image: url("assets/images/3-2.png"); }
+/* line 528, /vagrant/sass/partials/_select-product.scss */
+#select-product-wrapper .areas .area.active { border: 1px solid #f00; }
+
+/* line 1, /vagrant/sass/partials/_what-i-am-wearing.scss */
+#what-i-am-wearing { position: absolute; top: 0; right: 2px; bottom: 0; width: 36.7%; display: inline-block; padding: 0 5px; z-index: 10; }
+@media (max-width: 628px) { /* line 1, /vagrant/sass/partials/_what-i-am-wearing.scss */
+  #what-i-am-wearing { width: 100%; top: 0; padding: 0 10px; pointer-events: none; border-left: 0; } }
+/* line 18, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.route-home #what-i-am-wearing, .state-retrace #what-i-am-wearing, .state-share #what-i-am-wearing { display: none; }
+/* line 21, /vagrant/sass/partials/_what-i-am-wearing.scss */
+#what-i-am-wearing .heading-block { font-size: 12px; line-height: 22px; display: inline-block; font-family: "Raleway-Bold"; }
+@media (max-width: 628px) { /* line 21, /vagrant/sass/partials/_what-i-am-wearing.scss */
+  #what-i-am-wearing .heading-block { pointer-events: all; position: absolute; top: 0; left: 50%; width: auto; -webkit-transform: translateX(-50%); transform: translateX(-50%); z-index: 2; background: #fff; border-left: 1px solid #6c6c6c; border-right: 1px solid #6c6c6c; border-bottom: 1px solid #6c6c6c; cursor: pointer; padding: 0 10px; } }
+/* line 43, /vagrant/sass/partials/_what-i-am-wearing.scss */
+#what-i-am-wearing .heading-block label { margin: 0; font-weight: inherit; }
+@media (max-width: 628px) { /* line 43, /vagrant/sass/partials/_what-i-am-wearing.scss */
+  #what-i-am-wearing .heading-block label { padding: 0 10px; cursor: pointer; } }
+/* line 53, /vagrant/sass/partials/_what-i-am-wearing.scss */
+#what-i-am-wearing .slimScrollDiv { padding-right: 12px; margin-top: 14px; }
+@media (max-width: 628px) { /* line 53, /vagrant/sass/partials/_what-i-am-wearing.scss */
+  #what-i-am-wearing .slimScrollDiv { padding-left: 6px; } }
+/* line 59, /vagrant/sass/partials/_what-i-am-wearing.scss */
+#what-i-am-wearing .slimScrollDiv .products-block:not(.item) { height: 100%!important; }
+/* line 63, /vagrant/sass/partials/_what-i-am-wearing.scss */
+#what-i-am-wearing .slimScrollBar { background: #000 !important; height: 24px !important; }
+/* line 67, /vagrant/sass/partials/_what-i-am-wearing.scss */
+#what-i-am-wearing .slimScrollRail { width: 3px!important; background: #eee!important; right: 4px!important; }
+
+/* line 74, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.what-i-am-wearing-content { height: calc(100% - 22px); position: relative; width: 100%; }
+@media (max-width: 628px) { /* line 74, /vagrant/sass/partials/_what-i-am-wearing.scss */
+  .what-i-am-wearing-content { position: absolute; top: -100%; left: 0; padding-top: 30px; background-color: #fff; height: 100%; -webkit-transform: translateY(0); transform: translateY(0); transition: transform .4s ease-in-out; pointer-events: all; }
+  /* line 91, /vagrant/sass/partials/_what-i-am-wearing.scss */
+  .what-i-am-wearing-content.active { -webkit-transform: translateY(100%); transform: translateY(100%); pointer-events: all; } }
+
+/* line 99, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.amazon-block { line-height: 20px; }
+/* line 102, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.amazon-block.img { width: 85px; height: 23px; display: inline-block; vertical-align: top; background-image: url("assets/images/amazon_fr_logo_sm.png"); background-position: center; background-size: contain; background-repeat: no-repeat; border: 1px solid #9e9e9e; margin-left: -4px; }
+
+/* line 116, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.hint { font-size: 12px; line-height: 14px; font-family: "Raleway-Medium"; }
+@media (max-width: 628px) { /* line 116, /vagrant/sass/partials/_what-i-am-wearing.scss */
+  .hint { padding: 0 10px; } }
+
+/* line 127, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.products-block:not(.item) { height: calc(100% - 28px); overflow-x: hidden; overflow-y: scroll; padding: 2px 0; }
+/* line 133, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.products-block.item { width: 100%; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid #9e9e9e; }
+
+/* line 143, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product { display: inline-block; vertical-align: top; width: 100%; position: relative; margin-bottom: 0; font-weight: normal; text-decoration: none; }
+/* line 152, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product:hover { text-decoration: none; }
+/* line 155, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.item { width: 100%; float: left; padding: 2px 0 2px 2px; }
+/* line 160, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.image { background-position: center; background-size: contain; background-repeat: no-repeat; width: 48px; height: 48px; background-color: white; float: left; }
+/* line 172, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.info { width: calc(100% - 48px); }
+/* line 175, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.brand, .product.name { overflow: hidden; text-overflow: ellipsis; font-size: 9.5px; line-height: 10px; font-weight: bold; text-transform: uppercase; font-family: "Raleway-SemiBold"; padding-left: 2px; float: left; }
+/* line 187, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.color-preview { background-position: center; background-size: contain; background-repeat: no-repeat; width: 16px; height: 16px; float: left; }
+/* line 195, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.color-name { width: calc(100% - 16px); font-size: 8px; text-transform: uppercase; padding-left: 2px; }
+/* line 201, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.option { padding-left: 2px; padding-top: 2px; }
+/* line 205, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.status { position: absolute; top: 50%; right: 4px; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 20px; height: 20px; border: 1px solid #000; background-position: center; background-repeat: no-repeat; background-size: contain; }
+/* line 218, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.buttons { width: 100%; margin: 0 auto; text-align: center; }
+@media (max-width: 628px) { /* line 218, /vagrant/sass/partials/_what-i-am-wearing.scss */
+  .product.buttons { float: right; } }
+/* line 226, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.button { display: inline-block; cursor: pointer; border: 0; outline: 0; padding: 0; }
+/* line 232, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.button.buy { width: 120px; height: 23px; background-color: #f00; color: #fff; font-family: "Raleway-Bold"; font-size: 13px; text-transform: uppercase; line-height: 23px; text-align: center; float: left; margin-left: 52px; }
+/* line 245, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.button.remove { width: 20px; height: 20px; background-image: url("assets/images/icons/icon-close-2.png"); background-repeat: no-repeat; background-position: center; background-size: 60%; float: right; }
+/* line 255, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.shade { font-size: 11px; margin-bottom: 6px; padding-left: 2px; }
+/* line 261, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.shade { font-size: 11px; margin-top: 10px; margin-bottom: 6px; padding-left: 2px; }
+/* line 268, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.shade-label, .product.title-label, .product.brand-label { font-family: "Raleway-SemiBold"; margin-right: 4px; width: auto; }
+/* line 272, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.shade-label span, .product.title-label span, .product.brand-label span { font-family: "Raleway-Bold"; }
+/* line 276, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.price-value { font-family: "Raleway-SemiBold"; width: auto; }
+/* line 280, /vagrant/sass/partials/_what-i-am-wearing.scss */
+.product.shade-label, .product.title-label, .product.brand-label { display: block; margin-top: 2px; }
+
+/* line 3, /vagrant/sass/_non-us-market.scss */
+body.non-us-market .accounting { display: none; }
+/* line 8, /vagrant/sass/_non-us-market.scss */
+body.non-us-market #welcome-page .register-login { display: none; }
+/* line 15, /vagrant/sass/_non-us-market.scss */
+body.non-us-market .sidebar .saved-looks { display: none; }
+/* line 20, /vagrant/sass/_non-us-market.scss */
+body.non-us-market .sidebar .save ul li:last-child { display: none; }
+
+/* Project specific */
+/* line 29, /vagrant/sass/_non-us-market.scss */
+.alcon-canada.fr #welcome-page { background: url("../images/welcome-bg.png") bottom right no-repeat; }
+/* line 33, /vagrant/sass/_non-us-market.scss */
+.alcon-canada.fr .color-studio-logo { background: url("../images/color-studio-sprite-1.png"); background-position: 0px 0px; }
+
+/* Language specific */
