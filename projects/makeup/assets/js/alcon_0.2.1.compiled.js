@@ -9893,7 +9893,7 @@ Router events
       });
       Alcon.Utils.Helpers.fnResetLook();
       Alcon.Session.set('iSelectedFaceId', iFaceId);
-      Alcon.Utils.Helpers.trackEvent("welcome*click*/select_model/" + aFace.label);
+      //Alcon.Utils.Helpers.trackEvent("welcome*click*/select_model/" + aFace.label);
       return Alcon.EventDispatcher.trigger("choose:face");
     }
   });
