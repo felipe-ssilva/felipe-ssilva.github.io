@@ -7345,7 +7345,7 @@ define(function () {
           sCategory: "eyewear"
         });
       }
-      Alcon.Utils.Helpers.trackPage("/select-eyewear");
+      //Alcon.Utils.Helpers.trackPage("/select-eyewear");
       return this.oSelectEyewearView.render();
     },
     "select-jewelry": function() {
@@ -7354,7 +7354,7 @@ define(function () {
           sCategory: "jewelry"
         });
       }
-      Alcon.Utils.Helpers.trackPage("/select-jewelry");
+      //Alcon.Utils.Helpers.trackPage("/select-jewelry");
       return this.oSelectJewelryView.render();
     },
     "select-headwear": function() {
@@ -7363,14 +7363,14 @@ define(function () {
           sCategory: "headwear"
         });
       }
-      Alcon.Utils.Helpers.trackPage("/select-headwear");
+      //Alcon.Utils.Helpers.trackPage("/select-headwear");
       return this.oSelectHeadwearView.render();
     },
     "select-one-click-look": function() {
       if (!this.oOneClickLook) {
         this.oOneClickLook = new Alcon.Views.ClickLook;
       }
-      Alcon.Utils.Helpers.trackPage("/try_on/total_looks", "1-click looks");
+      //Alcon.Utils.Helpers.trackPage("/try_on/total_looks", "1-click looks");
       return this.oOneClickLook.render();
     },
     fnSetSubroute: function(sSubroute) {
@@ -7420,7 +7420,7 @@ define(function () {
     var classes, iNavigationTabId, sClass;
     $(".main-nav .color-studio-navigation").removeClass('active');
     if (route === "home" && Alcon.Session.get('app:launch')) {
-      Alcon.Utils.Helpers.trackPage("/launch/welcome");
+      //Alcon.Utils.Helpers.trackPage("/launch/welcome");
     }
     Alcon.Session.unset('app:launch');
     if (route === 'home') {
@@ -10096,7 +10096,7 @@ Router events
       if (!$('#photo').size()) {
         return;
       }
-      Alcon.Utils.Helpers.trackPage('/photo/auto_trace');
+      //Alcon.Utils.Helpers.trackPage('/photo/auto_trace');
       if ($.Jcrop == null) {
         return Alcon.Utils.Helpers.fnFindFaceAndContinue($('#photo').attr('src'));
       } else {
