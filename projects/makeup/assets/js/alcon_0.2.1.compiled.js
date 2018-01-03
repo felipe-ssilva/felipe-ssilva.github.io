@@ -7345,7 +7345,7 @@ define(function () {
           sCategory: "eyewear"
         });
       }
-      //Alcon.Utils.Helpers.trackPage("/select-eyewear");
+      Alcon.Utils.Helpers.trackPage("/select-eyewear");
       return this.oSelectEyewearView.render();
     },
     "select-jewelry": function() {
@@ -7354,7 +7354,7 @@ define(function () {
           sCategory: "jewelry"
         });
       }
-      //Alcon.Utils.Helpers.trackPage("/select-jewelry");
+      Alcon.Utils.Helpers.trackPage("/select-jewelry");
       return this.oSelectJewelryView.render();
     },
     "select-headwear": function() {
@@ -7363,14 +7363,14 @@ define(function () {
           sCategory: "headwear"
         });
       }
-      //Alcon.Utils.Helpers.trackPage("/select-headwear");
+      Alcon.Utils.Helpers.trackPage("/select-headwear");
       return this.oSelectHeadwearView.render();
     },
     "select-one-click-look": function() {
       if (!this.oOneClickLook) {
         this.oOneClickLook = new Alcon.Views.ClickLook;
       }
-      //Alcon.Utils.Helpers.trackPage("/try_on/total_looks", "1-click looks");
+      Alcon.Utils.Helpers.trackPage("/try_on/total_looks", "1-click looks");
       return this.oOneClickLook.render();
     },
     fnSetSubroute: function(sSubroute) {
@@ -7420,7 +7420,7 @@ define(function () {
     var classes, iNavigationTabId, sClass;
     $(".main-nav .color-studio-navigation").removeClass('active');
     if (route === "home" && Alcon.Session.get('app:launch')) {
-      //Alcon.Utils.Helpers.trackPage("/launch/welcome");
+      Alcon.Utils.Helpers.trackPage("/launch/welcome");
     }
     Alcon.Session.unset('app:launch');
     if (route === 'home') {
@@ -7829,7 +7829,7 @@ Router events
           return oProduct.pl === oProductLine.key;
         });
         if (!oProduct) {
-          // return console.log(oProductLine); CONSOLE BACANINHA
+          return console.log(oProductLine);
         } else {
           oProductLine.category = Alcon.Utils.Helpers.fnGetCategoryByFeature(oProduct.feature);
           return oProductLine.feature = oProduct.feature;
@@ -9203,7 +9203,7 @@ Router events
     fnHideDeviceUnsupported: function() {
       return $('body').removeClass('device-unsupported');
     },
-    /*trackPage: function(page, firstTab) {
+    trackPage: function(page, firstTab) {
       var gaId, postMessage, _i, _len, _ref, _results;
       if (firstTab) {
         if (firstTab === "1-click looks") {
@@ -9276,7 +9276,7 @@ Router events
       window.parent.postMessage('{ "vmeTrackPage": [{"eventname" : "' + page + '"}] }', '*');
       window.parent.postMessage('{ "vmeGetAds": [{"eventname" : "' + page + '"}] }', '*');
       return console.log("posted Page message: " + page);
-    },*/
+    },
     _fnApplyLooksAndCapture: function(aLooks, iIndex, aImages, fnCallback) {
       this.fnResetLook();
       if (aLooks[iIndex].product_data.click_look != null) {
@@ -9893,7 +9893,7 @@ Router events
       });
       Alcon.Utils.Helpers.fnResetLook();
       Alcon.Session.set('iSelectedFaceId', iFaceId);
-      //Alcon.Utils.Helpers.trackEvent("welcome*click*/select_model/" + aFace.label);
+      Alcon.Utils.Helpers.trackEvent("welcome*click*/select_model/" + aFace.label);
       return Alcon.EventDispatcher.trigger("choose:face");
     }
   });
@@ -9982,7 +9982,7 @@ Router events
       }
     },
     fnRenderUploadPhoto: function(oEvent) {
-      //Alcon.Utils.Helpers.trackEvent('welcome*click*/welcome/upload_photo');
+      Alcon.Utils.Helpers.trackEvent('welcome*click*/welcome/upload_photo');
       if (oEvent.target.id === 'upload') {
         return;
       }
@@ -10096,7 +10096,7 @@ Router events
       if (!$('#photo').size()) {
         return;
       }
-      //Alcon.Utils.Helpers.trackPage('/photo/auto_trace');
+      Alcon.Utils.Helpers.trackPage('/photo/auto_trace');
       if ($.Jcrop == null) {
         return Alcon.Utils.Helpers.fnFindFaceAndContinue($('#photo').attr('src'));
       } else {
