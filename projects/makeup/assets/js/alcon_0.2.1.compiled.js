@@ -7829,7 +7829,7 @@ Router events
           return oProduct.pl === oProductLine.key;
         });
         if (!oProduct) {
-          return console.log(oProductLine);
+          // return console.log(oProductLine); CONSOLE BACANINHA
         } else {
           oProductLine.category = Alcon.Utils.Helpers.fnGetCategoryByFeature(oProduct.feature);
           return oProductLine.feature = oProduct.feature;
