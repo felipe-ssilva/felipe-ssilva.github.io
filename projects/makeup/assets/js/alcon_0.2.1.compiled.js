@@ -9203,7 +9203,7 @@ Router events
     fnHideDeviceUnsupported: function() {
       return $('body').removeClass('device-unsupported');
     },
-    trackPage: function(page, firstTab) {
+    /*trackPage: function(page, firstTab) {
       var gaId, postMessage, _i, _len, _ref, _results;
       if (firstTab) {
         if (firstTab === "1-click looks") {
@@ -9231,7 +9231,7 @@ Router events
       }
       return _results;
     },
-    /*trackEvent: function(category, action, label) {
+    trackEvent: function(category, action, label) {
       var gaId, qsParams, _i, _len, _ref, _results;
       if (!((category != null) || (typeof _gat !== "undefined" && _gat !== null))) {
         return;
@@ -9982,7 +9982,7 @@ Router events
       }
     },
     fnRenderUploadPhoto: function(oEvent) {
-      Alcon.Utils.Helpers.trackEvent('welcome*click*/welcome/upload_photo');
+      //Alcon.Utils.Helpers.trackEvent('welcome*click*/welcome/upload_photo');
       if (oEvent.target.id === 'upload') {
         return;
       }
