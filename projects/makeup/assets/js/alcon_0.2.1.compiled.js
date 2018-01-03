@@ -9231,7 +9231,7 @@ Router events
       }
       return _results;
     },
-    trackEvent: function(category, action, label) {
+    /*trackEvent: function(category, action, label) {
       var gaId, qsParams, _i, _len, _ref, _results;
       if (!((category != null) || (typeof _gat !== "undefined" && _gat !== null))) {
         return;
@@ -9276,7 +9276,7 @@ Router events
       window.parent.postMessage('{ "vmeTrackPage": [{"eventname" : "' + page + '"}] }', '*');
       window.parent.postMessage('{ "vmeGetAds": [{"eventname" : "' + page + '"}] }', '*');
       return console.log("posted Page message: " + page);
-    },
+    },*/
     _fnApplyLooksAndCapture: function(aLooks, iIndex, aImages, fnCallback) {
       this.fnResetLook();
       if (aLooks[iIndex].product_data.click_look != null) {
