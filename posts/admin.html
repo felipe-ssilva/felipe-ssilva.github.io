@@ -17,14 +17,26 @@
 
  	<!-- CSS
    ================================================== -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">   
    <link rel="stylesheet" href="assets/css/app.css">    
 
 </head>
-<body>
+<body class="admin">
 
-<ul class="articles">
+<div class="container-fluid">
+  <header>
+    <h1>Admin</h1>
+  </header>
 
-</ul>
+  <form class="form-inline">
+    <div class="form-group mb-2">
+      <input type="text" class="form-control" name="title" id="title" placeholder="Title..." required />
+      <textarea class="form-control" name="text" id="text" placeholder="Text..." required></textarea>
+      <button type="submit" class="btn btn-primary btn-add">Add</button>
+    </div>
+  </form>
+
+</div>
 
 <!-- JS -->
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
