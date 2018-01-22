@@ -1355,6 +1355,9 @@ header .logo a {
 	color: #FFFFFF;
 	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
+.intro-content .intro-position a._link {
+	color: #cc005f;
+}
 .intro-content .intro-position span {
 	display: inline-block;
 }
