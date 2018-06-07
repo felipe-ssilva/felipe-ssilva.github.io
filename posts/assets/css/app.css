@@ -5,5 +5,7 @@ article h1, p {
 	font-family: "poppins-medium", sans-serif;
 }
 article h1 {
+	color: #fff;
+	font-size: 4.1rem;
 	text-align: center;
 }
