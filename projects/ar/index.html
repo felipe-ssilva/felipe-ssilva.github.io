@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
         <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
         
@@ -28,14 +29,22 @@
 
 <body>
 
-    <a-scene embedd arjs>
+    <a-scene embedd arjs="sourceType: webcam;">
 
 
-        <a-marker preset="hiro">
+        <a-marker-camera type="pattern" url="pattern-marker.patt">
 
             <a-sphere position="0 2 0" color="blue"></a-sphere>
 
+
+            <a-image position="0 0.2 0" rotation="270 0 0" height="1" width="1" src="marker.png"></a-image>
+
+
+            <a-image position="0 0.4 0" rotation="270 0 0" height="1" width="1" src="marker.png"></a-image>
+
         </a-marker-camera>
+
+            <a-entity camera></a-entity>
 
     </a-scene>
 
