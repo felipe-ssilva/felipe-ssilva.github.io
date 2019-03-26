@@ -1,44 +1,41 @@
 <!DOCTYPE html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
-
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
-
-<style type="text/css">
-
-#arjsDebugUIContainer
-
-{
-
-display: none!important;
-
-}
-
-.a-enter-vr-button
-
-{
-
-display: none!important;
-
-}
-
-</style>
+<html>
+<head>
+        <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+        
+        <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+        
+        <style type="text/css">
+        
+        #arjsDebugUIContainer
+        
+        {
+        
+        display: none!important;
+        
+        }
+        
+        .a-enter-vr-button
+        
+        {
+        
+        display: none!important;
+        
+        }
+        
+        </style>
+</head>
 
 <body>
 
-    <a-scene>
+    <a-scene embedd arjs>
 
 
-        <a-marker-camera preset="custom" type="pattern" url="pattern-marker.patt">
+        <a-marker preset="hiro">
 
-
-            <a-image position="0 0.2 0" rotation="270 0 0" height="1" width="1" src="marker.png"></a-image>
-
-
-            <a-image position="0 0.4 0" rotation="270 0 0" height="1" width="1" src="marker.png"></a-image>
+            <a-sphere position="0 2 0" color="blue"></a-sphere>
 
         </a-marker-camera>
-
-            <a-entity camera></a-entity>
 
     </a-scene>
 
