@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html amp lang="en">
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
@@ -28,9 +28,22 @@
    <link rel="stylesheet" href="assets/css/vendor.css">     
 
    <!-- script
-   ================================================== -->   
+   ================================================== --> 
+	<script async src="https://cdn.ampproject.org/v0.js"></script>
 	<script src="assets/js/modernizr.js"></script>
 	<script src="assets/js/pace.min.js"></script>
+	
+	<script type="application/ld+json">
+	      {
+		"@context": "http://schema.org",
+		"@type": "NewsArticle",
+		"headline": "Open-source framework for publishing content",
+		"datePublished": "2015-10-07T12:02:41Z",
+		"image": [
+		  "logo.jpg"
+		]
+	      }
+	</script>
 </head>
 
 <body id="top">
@@ -112,7 +125,7 @@
 
 	   			<div class="intro-info">
 
-	   				<img src="assets/images/me.jpg" alt="Profile Picture">
+	   				<amp-img src="assets/images/me.jpg" alt="Profile Picture"></amp-img>
 
 	   				<p class="lead">
 	   					I'm an autodidact and passionate for web development. Working with clients such as Boticário Group, Sony, Dell, Odebrecht and others.
@@ -376,7 +389,7 @@
 					
 					<article class="bgrid folio-item">
 						<div class="item-wrap">
-							<img src="assets/images/portfolio/liberty.jpg" alt="Liberty">
+							<amp-img src="assets/images/portfolio/liberty.jpg" alt="Liberty"></amp-img>
 							<a href="javascript:void(0)" class="overlay">	                  	           
 								<div class="folio-item-table">
 									<div class="folio-item-cell">
