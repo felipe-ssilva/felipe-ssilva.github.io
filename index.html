@@ -48,7 +48,7 @@
 	<script>
 	    if ('serviceWorker' in navigator) {
 		window.addEventListener('load', function () {
-		    navigator.serviceWorker.register("/assets/js/service-worker.js", { "scope": "/" }).then(function () {
+		    navigator.serviceWorker.register("/assets/js/service-worker.js", { "scope": "/assets/js/" }).then(function () {
 			console.log("Service Worker registered successfully.");
 		    }).catch(function (error) {
 			console.error("Service Worker registration failed:", error);
