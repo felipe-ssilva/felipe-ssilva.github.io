@@ -49,7 +49,7 @@
 	    if ('serviceWorker' in navigator) {
 		window.addEventListener('load', function () {
 		    navigator.serviceWorker.register("/assets/js/service-worker.js", { "scope": "/" }).then(function () {
-			/onsole.log("Service Worker registered successfully.");
+			console.log("Service Worker registered successfully.");
 		    }).catch(function (error) {
 			console.error("Service Worker registration failed:", error);
 		    });
