@@ -20,12 +20,18 @@
     	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 	<link rel="canonical" href="https://amp.dev/pt_br/documentation/guides-and-tutorials/start/create/basic_markup/">
     	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<style amp-custom></style>
 
  	<!-- CSS
    ================================================== -->
-	<link rel="stylesheet" href="assets/css/base.css">  
+	<style amp-custom>
+	  {% include "/assets/css/base.css" %};
+          {% include "/assets/css/main.css" %};
+          {% include "/assets/css/vendor.css" %};
+	</style>
+	<!--<link rel="stylesheet" href="assets/css/base.css">  
 	<link rel="stylesheet" href="assets/css/main.css">
-	<link rel="stylesheet" href="assets/css/vendor.css">     
+	<link rel="stylesheet" href="assets/css/vendor.css">-->  
 
    <!-- script
    ================================================== --> 
@@ -135,7 +141,7 @@
 	   			<h1>Let me introduce myself.</h1>
 
 	   			<div class="intro-info">
-	   				<amp-img src="assets/images/me.jpg" width="50" height="50" alt="Felipe Developer" layout="responsive"></amp-img>
+	   				<amp-img src="assets/images/me.jpg" width="10" height="10" alt="Felipe Developer" layout="responsive"></amp-img>
 
 	   				<p class="lead">
 	   					I'm an autodidact and passionate for web development. Working with clients such as Boticário Group, Sony, Dell, Odebrecht and others.
