@@ -52,6 +52,9 @@
 		}
 	</style>
 
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+	
 </head>
 <body id="top">
 
@@ -70,7 +73,38 @@
 			  <a target="_blank" href="//medium.com/@felipesilvaa">Medium</a>
 			</li>
 	        </ul>
+		
+		<form>
+  <input type="text"></input>
+  <div class="g-recaptcha" data-sitekey="6Leu890UAAAAAEySZBjjdSjTu5s0HIGT7qrWhy2B"></div>
+  <input type="button" onclick="checkRecaptcha();" value="submit"></input>
+</form>
 	</main>
 	
+<script> 
+function checkRecaptcha() {
+  var response = grecaptcha.getResponse();
+  if(response.length == 0) { 
+    //reCaptcha not verified
+    alert("no pass"); 
+  }
+  else { 
+    //reCaptch verified
+    alert("pass"); 
+  }
+}
+
+// implement on the backend
+function backend_API_challenge() {
+    var response = grecaptcha.getResponse();
+    $.ajax({
+        type: "POST",
+        url: 'https://www.google.com/recaptcha/api/siteverify',
+        data: {"secret" : "6Leu890UAAAAAEENwZndLYJ5FhSpRYx0ysHqmFZk", "response" : response, "remoteip":"localhost"},
+        contentType: 'application/x-www-form-urlencoded',
+        success: function(data) { console.log(data); }
+    });
+}
+</script>
 </body>
 </html>
