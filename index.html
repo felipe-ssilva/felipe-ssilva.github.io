@@ -100,7 +100,7 @@ function backend_API_challenge() {
     $.ajax({
         type: "POST",
         url: 'https://www.google.com/recaptcha/api/siteverify',
-        data: {"secret" : "6Leu890UAAAAAEENwZndLYJ5FhSpRYx0ysHqmFZk", "response" : response, "remoteip":"localhost"},
+        data: {"secret" : "6Leu890UAAAAAEENwZndLYJ5FhSpRYx0ysHqmFZk", "response" : response},
         contentType: 'application/x-www-form-urlencoded',
         success: function(data) { console.log(data); }
     });
