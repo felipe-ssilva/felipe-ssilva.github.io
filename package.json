@@ -39,7 +39,6 @@
     "gh-pages": "^2.2.0",
     "prettier": "^1.19.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby"
   ],
@@ -47,7 +46,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/felipe-ssilva/felipe-ssilva.github.io.git"
   },
   "scripts": {
     "build": "gatsby build",
