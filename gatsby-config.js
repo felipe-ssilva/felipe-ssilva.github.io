@@ -12,7 +12,7 @@ module.exports = {
       linkedin: `felipe-da-silva-b8664562/`
     },
   },
-  pathPrefix: "/blog",
+  pathPrefix: "/",
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
