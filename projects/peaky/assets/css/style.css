@@ -2036,8 +2036,11 @@ hr {
   }
 }
 @media (max-width: 575px) {
+  .logo a img {
+    width: 40px;
+  }
   .header-area .main-header {
-    padding: 22px 14px;
+    padding: 10px 0px;
   }
 }
 .header-area .main-header .main-menu ul li {
