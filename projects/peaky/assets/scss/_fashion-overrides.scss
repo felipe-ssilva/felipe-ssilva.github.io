@@ -1,0 +1,87 @@
+/* Fashion Store Overrides */
+
+// More elegant styling for fashion store
+.hero__caption {
+    h1 {
+        font-weight: 400 !important;
+        letter-spacing: 1px !important;
+        line-height: 1.3 !important;
+    }
+    span {
+        font-weight: 300 !important;
+        letter-spacing: 2px !important;
+        text-transform: uppercase;
+    }
+}
+
+// Services/Collections section styling
+.services-caption {
+    .service-cap {
+        h4 {
+            font-weight: 500 !important;
+            letter-spacing: 1px;
+        }
+        p {
+            color: #666 !important;
+            line-height: 1.6;
+        }
+    }
+}
+
+// Section titles
+.section-tittle {
+    span {
+        color: $theme-color !important;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+    h2 {
+        font-weight: 400 !important;
+        letter-spacing: 1px;
+        color: #333 !important;
+    }
+}
+
+// Make pricing/product list more elegant
+.pricing-list {
+    ul {
+        li {
+            font-family: $font_3;
+            font-size: 16px;
+            color: #555;
+            span {
+                color: $theme-color;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+// Footer styling
+.footer-number {
+    h4 {
+        a {
+            color: $theme-color !important;
+        }
+    }
+    p {
+        color: #666;
+    }
+}
+
+// Navigation styling for fashion feel
+.main-menu {
+    ul {
+        li {
+            a {
+                font-family: $font_3 !important;
+                font-weight: 400 !important;
+                letter-spacing: 1px !important;
+                text-transform: uppercase !important;
+                font-size: 14px !important;
+            }
+        }
+    }
+}
